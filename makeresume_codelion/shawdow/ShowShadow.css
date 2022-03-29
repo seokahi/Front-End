@@ -1,0 +1,26 @@
+.name-text {
+    font-size: 17px;
+    color: #7c7c7c;
+    font-weight: bold;
+    /* 폰트 두께 두껍게 */
+}
+
+footer{
+    text-align: center;
+    background-color: #1e1e1e;
+    color: #919191;
+    font-size:12px;
+    padding:100px;
+}
+
+.main-box {
+    width: 610px;
+    padding: 30px;
+    margin: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    /* 중앙정렬 */
+    border: 1px solid #ebebeb;
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,0.1);
+    /* box-shadow: 가로축으로 얼마나 그림자가 뻗어나가는지 (0이면 x 양수면 오른쪽 음수면 왼쪽으로 뻗어나감 ), 그림자를 이동하는 것, 그림자의 흐린 정도, 그림자의 퍼진 정도, rgb과 0.1은 10퍼센트의 투명도를 의미*/
+}

@@ -1,0 +1,17 @@
+footer{
+    text-align: center;
+    background-color: #121212;
+    color: #919191;
+    font-size:12px;
+}
+
+.main-box {
+    border : 5px solid wheat;
+    /* border : 두께 방식 색깔 -> 박스를 그리는 방법 */
+    width: 610px;
+    text-align:  center;
+    /* 가운데 정렬 */
+    margin-left: auto;
+    margin-right: auto;
+    /* div을 가운데로 정렬하는 방법이구나를 외우기 */
+}
