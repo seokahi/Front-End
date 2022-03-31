@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello</title>
+</head>
+<body>
+    <!-- <img src="./귀여워.jpeg" alt=""> -->
+    <!-- / 가 root임 -->
+    <!--<img
+        width="200px"
+        srcset="귀여워.jpeg 2x,
+                card-image.jpg 3x"
+        src="a.jpg"
+        alt="test">  -->
+        <!-- <img srcset="3.png 500w, 2.png 300w, 1.png 150w" 
+        sizes="(min-width: 960px) 250px,
+			 (min-width: 620px) 150px,
+			 300px"
+        src="1.png" alt="rabit"> -->
+        <picture>
+            <source srcset="1.png" media=
+            "(min-width:960px)">
+            <source srcset="2.png" media=
+            "(min-width:640px)">
+            <img src="3.png" alt="">
+        </picture>
+</body>
+</html>
