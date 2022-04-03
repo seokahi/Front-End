@@ -18,12 +18,14 @@
 ✅ 이력서 페이지
 ![웹 캡처_4-4-2022_2409_](https://user-images.githubusercontent.com/73926393/161440827-bcc07df7-c0fc-439a-baca-d5f90fa45252.jpeg)
 
+
 ## 📋 profile/profile-practice
 
 프로필 페이지 구현
 
 ✅ 프로필 페이지 
 ![웹 캡처_4-4-2022_2409_](https://user-images.githubusercontent.com/73926393/161441005-da348a5f-f01d-4a8c-ad7d-73cd8aab6029.jpeg)
+
 
 ## 📋 profile/bucketlist
 
