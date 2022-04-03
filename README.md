@@ -12,7 +12,14 @@
 
 
 ## 📋 makeresume_codelion
+-----
+간단 이력서 구현
 
+✅ 이력서 페이지
+![웹 캡처_4-4-2022_2409_](https://user-images.githubusercontent.com/73926393/161440827-bcc07df7-c0fc-439a-baca-d5f90fa45252.jpeg)
 
+## 📋 profile/profile-practice
+----
+프로필 페이지 구현
 
-
+✅ 프로필 페이지 
