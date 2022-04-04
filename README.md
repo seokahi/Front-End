@@ -13,7 +13,7 @@
 ## 📋 googleform
 
 ✅ 구글폼 페이지 👉 나중에 코드 수정해야해!!!!!!!넘 더러움
-![웹 캡처_5-4-2022_15630_127 0 0 1](https://user-images.githubusercontent.com/73926393/161594053-2b16641c-93c2-4c6d-b983-fd0bbff7c3bd.jpeg)
+![웹 캡처_5-4-2022_15842_127 0 0 1](https://user-images.githubusercontent.com/73926393/161594351-74d09ab8-2e61-4e90-9b3b-b15a71c7ebe4.jpeg)
 
 
 ## 📋 makeresume_codelion
