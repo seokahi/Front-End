@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="googleform.css">
+    <title>구글폼</title>
+</head>
+<body>
+    <header class="header">
+        <h1>나와 잘 맞는 회사는?</h1>
+        <p>가고 싶은 회사에 대한 호감도를 조사합니다. 아이고 의미없다.</p>
+    </header>
+    <main>
+        <section class="main">
+            <form action="" method="get" class="form" >
+                <article class="sec company">
+                    <h2>다음 문자중에 왠지 마음에 드는 것을 하나 고르세요.</h2>
+                    <input type="radio" name="com" id="naver">
+                    <label for="naver">네</label><br>
+                    <input type="radio" name="com" id="kakao">
+                    <label for="kakao">카</label><br>
+                    <input type="radio" name="com" id="lion">
+                    <label for="lion">라</label><br>
+                    <input type="radio" name="com" id="coupang">
+                    <label for="coupang">쿠</label><br>
+                    <input type="radio" name="com" id="delivery">
+                    <label for="delivery">배</label><br>
+                </article>
+                <article class="sec messanger">
+                    <h2>친구와 문자를 합니다. 다음 중 어떤 메신저를 이용하시겠습니까? 모두 골라주세요.</h2>
+                    <input type="checkbox" name="com" id="naver">
+                    <label for="naver">카카오톡</label><br>
+                    <input type="checkbox" name="com" id="kakao">
+                    <label for="kakao">라인</label><br>
+                    <input type="checkbox" name="com" id="insta">
+                    <label for="insta">인스타그램 디엠</label><br>
+                    <input type="checkbox" name="com" id="nate">
+                    <label for="nate">네이트콘</label><br>
+                    <input type="checkbox" name="com" id="budy">
+                    <label for="budy">버디버디</label><br>
+                </article>
+                <article class="sec sentence">
+                    <h2>면접에서 자신의 포부를 한 문장으로 얘기한다면?</h2>
+                    <input type="text" name="dream" id="dream" placeholder="내 답변">
+                </article>
+                <article class="sec talk">
+                    <h2>당신은 지금 한 기업의 최종면접을 앞두고 있습니다. 면접장에 들어가기 직전, 자기 자신에게 해주고 싶은 말은?</h2>
+                    <input type="text" name="myself" id="myself" placeholder="내 답변">
+                </article>
+                <article class="sec question">
+                    <h2>다음 중 기술 면접에 듣고 싶은 질문이 아닌 것은?</h2>
+                        <select name="ques" id="ques">
+                            <option value="">전체</option>
+                            <option value="first-question">프로젝트에 관련한 질문</option>
+                            <option value="seconde-question">개념 용어에 관련한 질문</option>
+                        </select>
+                </article>
+                <article class="sec date" >
+                    <h2>취업을 희망하는 날짜를 선택해주세요</h2>
+                    <input type="date" name="date" id="date">
+                </article>
+                <article class="sec time"> 
+                    <h2>업무를 시작 하기에 가장 적당한 시간을 고르세요</h2>
+                    <input type="time" name="time" id="time">
+                    <select name="AP" id="AP">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </article>
+                <button class="btn">제출</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

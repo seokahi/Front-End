@@ -1,0 +1,150 @@
+body,h1,h2 {
+    margin: 0;
+    padding:0;
+}
+
+h1,h2 {
+ font-weight: inherit;
+ font-size:inherit;
+}
+body {
+    background-color: lavender;
+}
+
+h2 {
+    margin:20px;
+    margin-right:0px;
+    font-weight:600;
+}
+
+.header {
+    height: 90px;
+    border-top:7px solid purple;
+    padding-left:20px;
+    padding-top:10px;
+    background-color: white;
+    margin:10px auto;
+    width: 80%;
+    border: 1px solid lavender;
+    border-radius: 10px;    
+    border-top:7px solid purple;
+}
+
+.header h1 {
+    font-weight: bold;
+    font-size:20px;   
+}
+
+.header p{
+    padding-top:10px;
+    font-size:15px;
+    font-weight:normal;
+}
+
+.sec {
+    width: 81.5%;
+    margin:10px auto;   
+    border: 1px solid lavender;
+    border-radius: 10px; 
+    background-color: white;
+    margin-bottom:20px;
+}
+
+
+.company {
+    height:330px;
+}
+
+.form input{
+    margin:16px;
+    margin-left:20px;
+}
+
+.form label {
+    margin-left:10px;
+    font-weight: 600;
+}
+
+
+.messanger {
+    height:330px;
+}
+
+
+.sentence {
+    height:150px;
+}
+
+
+#dream {
+    border: none;
+    border-bottom: 1px solid gray;
+    margin: 20px;
+    width:350px;
+}
+
+input[type="text" i] {
+    padding: 6px 5px;
+}
+
+
+.talk {
+    height:150px;
+}
+
+#myself {
+    border: none;
+    border-bottom: 1px solid gray;
+    margin: 20px;
+    width: 82%;
+}
+
+.question {
+    height:150px;
+}
+
+
+.question #ques {
+    border:1px solid lightgray;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    color:rgb(102, 101, 101);
+    margin-left:20px;
+}
+
+.date {
+    height:130px;
+}
+
+
+#date {
+    border: 1px solid gainsboro;
+    height:30px;
+    margin-left: 20px;
+}
+.time {
+    height:130px;
+}
+#time {
+    border: 1px solid gainsboro;
+    height:30px;
+    margin-left: 20px;
+}
+
+#AP {
+    border: 1px solid gainsboro;
+    height:30px;
+}
+
+.btn {
+    margin-left:170px;
+    margin-bottom: 20px;
+    background-color: rgb(101, 36, 161);
+    border: 1px solid rgb(101, 36, 161);
+    border-radius: 5px;
+    color:white;
+    width: 90px;
+    height:50px;
+    font-size: 15px;
+}

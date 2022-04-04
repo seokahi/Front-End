@@ -28,7 +28,7 @@
         <button type="submit">로그인</button>
     </form> -->
     <!-- action에는 도달하는 주소를 적는데 안적으면 자기 자신 -->
-    <form action="" method="get">
+    <form action="" method="get" class="form">
         <label for="id">아이디</label>
         <input type="text" name="아이디" id="id"><br>
         <label for="pw">패스워드</label>
@@ -42,7 +42,29 @@
         <input type="checkbox" name="언어" id="python" value="Javascript"><label for="python">Javascript</label><br>
         <input type="checkbox" name="언어" id="python" value="C"><label for="python">C</label><br>
         <input type="submit" value="회원가입">
+        <input type="text">
+        <input type="email">
+        <input type="tel">
+        <input type="submit">
     </form>
-
+    <!-- form 태그 쓰려면 감싸기!! -->
+    <!-- 브라우저에서 어떻게 표현되는지 확인해보세요 -->
+    <form action="" method="get" class="form">
+        <fieldset>
+        <legend>개인정보</legend>
+        <label for="myName">이름</label>
+        <input type="text" name="name" id="myName">
+        <label for="myTel">전화번호</label>
+        <input type="tel" name="tel" id="myTel">
+        <label for="myEmail">이메일</label>
+        <input type="email" name="email" id="myEmail">
+        </fieldset>
+        <fieldset>
+        <legend>개인정보 제공 동의</legend>
+        <label for="checkAgree">개인정보 제공에 동의하십니까?</label>
+        <input type="checkbox" name="agree" id="checkAgree">
+        <input type="submit" value="hiii">
+        </fieldset>
+    </form>
 </body>
 </html>
