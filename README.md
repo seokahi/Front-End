@@ -10,6 +10,11 @@
 ✅ 회원가입 페이지
 ![웹 캡처_4-4-2022_22213_127 0 0 1](https://user-images.githubusercontent.com/73926393/161440341-fa9cda90-c1cb-4a81-b8d8-999cf6231085.jpeg)
 
+## 📋 googleform
+
+✅ 구글폼 페이지 👉 나중에 코드 수정해야해!!!!!!!넘 더러움
+![웹 캡처_5-4-2022_15630_127 0 0 1](https://user-images.githubusercontent.com/73926393/161594053-2b16641c-93c2-4c6d-b983-fd0bbff7c3bd.jpeg)
+
 
 ## 📋 makeresume_codelion
 
