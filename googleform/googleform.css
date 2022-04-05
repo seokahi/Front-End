@@ -17,11 +17,10 @@ h2 {
     font-weight:600;
 }
 
-.wrapper {
+
+.header {
     width:750px;
     margin: 0 auto;
-}
-.header {
     height: 150px;
     border-top:7px solid purple;
     padding-left:20px;
@@ -47,6 +46,7 @@ h2 {
 }
 
 .sec {
+    width:750px;
     margin:10px auto;   
     border: 1px solid lavender;
     border-radius: 10px; 
@@ -142,7 +142,6 @@ input[type="text" i] {
 }
 
 .btn {
-    margin-bottom: 20px;
     background-color: rgb(101, 36, 161);
     border: 1px solid rgb(101, 36, 161);
     border-radius: 5px;
@@ -157,4 +156,10 @@ input[type="text" i] {
     background-color: lavender;
     color:rgb(101, 36, 161);
     float:right;
+}
+
+.button {
+    background-color: lavender;
+    width: 774px;
+    margin: 15px auto;
 }
