@@ -1,0 +1,5 @@
+@import "002_다중css예시.css";
+
+p {
+    background-color: red;
+}
