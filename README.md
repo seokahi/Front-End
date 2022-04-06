@@ -18,7 +18,7 @@
 ## 📋 calendar
 
 ✅ 달력 페이지
-![웹 캡처_6-4-2022_175135_127 0 0 1](https://user-images.githubusercontent.com/73926393/161935822-3e086f1c-3557-4b1b-890c-fc30a023acd6.jpeg)
+![image](https://user-images.githubusercontent.com/73926393/161936861-7cb411f9-971d-4f3c-91bf-158ff17f1b88.png)
 
 
 ## 📋 makeresume_codelion
