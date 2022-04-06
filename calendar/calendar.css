@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,500&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-weight: inherit;
+    font-size: inherit;
+}
+body {
+    background-image: url('sky.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.header {
+    margin:0px auto;
+    margin-top:100px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size:100px;
+    font-weight: 900;
+    color:#c5c198;
+}
+
+.wrapper {
+    margin:10px auto;
+    text-align:center;
+}
+.calendar {
+    display: inline-block;
+    color:white;
+    font-size:20px;
+    width: 330px;
+    height:330px;
+}
+
+.month {
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+th:nth-child(1),td:nth-child(1) {
+    color:red;
+}
