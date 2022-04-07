@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lioncat</title>
+    <style>
+        /* animaion */
+        @keyframes 귀오른쪽 {
+            from {
+                transform: rotate(30deg);
+            }
+            to {
+                transform: rotate(40deg) translate(10px);
+            }
+        }
+        @keyframes 귀왼쪽 {
+            from {
+                transform: rotate(-30deg);
+            }
+            to {
+                transform: rotate(-40deg) translate(-10px);
+            }
+        }
+        /* setting */
+        :root {
+            --pri: #CE705F;
+            --sec: #ECD376;
+        }
+        /* reset */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        /* layout */
+        /* design */
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: rgb(139, 176, 211);
+        }
+        .lioncat {
+            /* absolute에 기준점이 됨. */
+            position: relative;
+            top: 100px;
+            margin: 50px auto;
+            width: 400px;
+            height: 380px;
+
+        }
+        .lioncat .ear {
+            
+            position:absolute;
+            top:0;
+            width:80px;
+            height:92px;
+            border:10px solid #000;
+            border-radius: 50%;
+            background-color: var(--sec);
+        }
+
+        .lioncat .ear.left {
+            top: 35px;
+            left:85px;
+            transform: rotate(-30deg);
+            border-radius: 70% 50% 0 0;
+            box-shadow: 0 0 20px rgba(0,0,0 0.5);
+            animation: 귀왼쪽 .3s infinite  alternate;
+        }
+        .lioncat .ear.right {
+            top: 35px;
+            right:85px;
+            transform: rotate(30deg);
+            border-radius: 50% 70% 0 0;
+            box-shadow: 0 0 20px rgba(0,0,0 0.5);
+            animation: 귀오른쪽 .3s infinite  alternate;
+        }
+
+        .lioncat .earline.left {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 60px;
+            background-color: #000;
+            border: 5px solid #000;
+            border-radius: 30%;
+            transform: rotate(90deg);
+            border-radius: 10% 0 0 60%;
+        }
+
+        .lioncat .earline.right {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 60px;
+            background-color: #000;
+            border: 5px solid #000;
+            border-radius: 30%;
+            transform: rotate(90deg);
+            border-radius: 60% 0 0 10%;
+        }
+
+        .lioncat .face {
+            position: absolute;
+            background-color: var(--sec);
+            border:10px solid black;
+            border-radius: 50%;
+            width:200px;
+            height: 200px;
+            top:80px;
+            left:100px;
+
+        }
+        .lioncat .eye {
+            position: absolute;
+            top:60px;
+            width:23px;
+            height:23px;
+            background-color:black;
+            border:10px solid black;
+            border-radius: 50%;
+
+        }
+        .eye.left {
+            left:100px;
+        }
+
+        .eye.right {
+            right: 100px;
+        }
+
+        .mouthbottom {
+            position :absolute;
+            width:50px;
+            height: 50px;
+            border : 10px solid black;
+            border-radius: 10% 10% 40% 40%;
+            top:115px;
+            left:65px;
+            background-color: #c94F53;
+        }
+
+        .mouthbottom .mouthline {
+            position: absolute;
+            left:-10px;
+            top:10px;
+            width: 50px;
+            background-color: #000;
+            border: 5px solid #000;
+            border-radius: 30%;
+            transform: rotate(90deg);
+        }
+        .nose {
+            position : absolute;
+            top:90px;
+            left:80px;
+            border : 10px solid black;
+            border-radius:10% 10% 30% 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 클래스명, 배치 등 생각 -->
+    <div class="lioncat">
+        <!-- 귀와 동그라미가 먼저.  -->
+        <div class="ear left"> 
+            <div class="earline right"></div>
+        </div>    
+        <div class="ear right">
+            <div class="earline left"></div>
+         </div>
+        <div class="face">
+            <div class="eye left">
+            </div>
+            <div class="eye right">
+            </div>
+            <div class="nose"></div>
+            <div class="mouthbottom">
+                <div class="mouthline"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
