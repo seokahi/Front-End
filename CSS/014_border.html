@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>width and height</title>
     <style>
+        div {
+            width:400px;
+        }
         h1 {
-            /* box-sizing: border-box; */
-            width: 200px;
+            box-sizing: border-box;
+            width: 250px;
             height: 50px;
             padding: 2px;
             /* border: 1px solid black; */
@@ -40,24 +43,42 @@
             border-radius: 10%;
         }
         .two {
+            display: inline-block;
             width: 80px;
             height: 80px;
             border: 5px solid black;
             background-color: blanchedalmond;
+            border-color : red green blue yellow;
             border-top-left-radius: 50px;
+            border-top-right-radius: 20px;
+        }
+        .three {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border: 5px solid black;
+            background-color: blanchedalmond;
+            border-color : red green blue yellow;
+            border-top-left-radius: 20px;
             border-top-right-radius: 50px;
         }
     </style>
 </head>
 <body>
     <!-- 32px -->
+    <div>
     <h1>hello world</h1>
+</div>
     <!-- 16px -->
     <h1>hello world</h1>
     <h2>hello world</h2>
     <h3>hello world</h3>
     <p>hello world</p>
     <div class="one"></div>
+    <br>
+    <br>
+    <br>
     <div class="two"></div>
+    <div class="three"></div>
 </body>
 </html>

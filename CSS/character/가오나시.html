@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lioncat</title>
+    <style>
+        /* animaion */
+        @keyframes 얼굴움직임 {
+            from {
+                transform: rotate(10deg);
+            }
+            to {
+                transform: rotate(-10deg);
+            }
+        }
+        body {
+            background-color: azure;
+        }
+        .Noface {
+            /* absolute에 기준점이 됨. */
+            position: relative;
+            top: 100px;
+            margin: 50px auto;
+            width: 400px;
+            height: 600px;
+            /* background-color:white; */
+            
+        }
+        .Noface .top {
+            position: absolute;
+            background-color: rgba(0,0,0,0.9);
+            border:1px solid black;
+            border-radius: 50%;
+            width:200px;
+            height: 400px;
+            top:80px;
+            left:98px;
+
+        }
+        .Noface .bottom {
+            position: absolute;
+            background-color: rgba(0,0,0,0.9);
+            border:1px solid black;
+            border-radius: 35% 37% 0% 0%;
+            width:230px;
+            height: 420px;
+            top:190px;
+            left:84px;
+        }
+
+        .Noface .face {
+            position: absolute;
+            background-color: white;
+            border:1px solid white;
+            border-radius: 40% 40% 45% 45%;
+            width:130px;
+            height: 200px;
+            top:90px;
+            left:133px;
+            animation: 얼굴움직임 2s infinite  alternate;
+        }
+        .Noface .eye {
+            background-color: black;
+            position: absolute;
+            top:60px;
+            width:30px;
+            height:15px;
+            /* background-color:black; */
+            border:1px solid black;
+            border-radius: 50%;
+
+        }
+        .eye.left {
+            left:85px;
+        }  
+
+        .eye.right {
+            right: 85px;
+        }
+        .face .shadow {
+            position :absolute;
+            top:85px;
+            width:27px;
+            height:3px;
+            border : 1px solid black;
+            border-radius: 10% 10% 40% 40%;
+            background-color: black;
+        }
+        .shadow.left {
+            left:85px;
+        }  
+
+        .shadow.right {
+            right: 85px;
+        }
+        .face .bora {
+            position :absolute;
+            width:22px;
+            height: 45px;
+            border: 1px solid rgb(167, 146, 211);
+            background-color: rgb(167, 146, 211);
+        }
+        .bora.topleft {
+            top:10px;
+            left:20px;
+            border-top-left-radius: 50%;
+        }
+        .bora.topright {
+            top:10px;
+            right:20px;
+            border-top-right-radius: 50%;
+        }
+        .bora.bottomleft{
+            top:100px;
+            left:15px;
+            height:55px;
+            border-bottom-left-radius: 50%;
+        }
+        .bora.bottomright {
+            top:100px;
+            right: 15px;
+            height:55px;
+            border-bottom-right-radius: 50%;
+        }
+        .mouse {
+            position :absolute;
+            width:60px;
+            height: 13px;
+            border : 1px solid black;
+            border-radius: 50%;
+            top:160px;
+            left:35px;
+            background-color: black;
+        }
+
+        .mousebottom {
+            position :absolute;
+            width:30px;
+            height: 5px;
+            border : 1px solid rgb(167, 146, 211);
+            border-radius: 50%;
+            top:180px;
+            left:50px;
+            background-color: rgb(167, 146, 211);
+        }
+    </style>
+</head>
+<body>
+    <div class="Noface">
+        <div class="body">
+            <div class="top"></div>
+            <div class="bottom"></div>
+        <div class="face">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="shadow left"></div>
+            <div class="shadow right"></div>
+            <div class="bora topleft"></div>
+            <div class="bora topright"></div>
+            <div class="bora bottomleft"></div>
+            <div class="bora bottomright"></div>
+            <div class="mouse"></div>
+            <div class="mousebottom"></div>
+        </div>
+
+    </div>
+</body>
+</html>
