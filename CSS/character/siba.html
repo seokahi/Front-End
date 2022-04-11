@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>siba</title>
+    <style>
+        /* animaion */ 
+        /* setting */
+        :root {
+            --pri: #CE705F;
+            --sec: #ECD376;
+        }
+        /* reset */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        /* layout */
+        /* design */
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: rgb(211, 146, 173);
+        }
+        .siba {
+            /* absolute에 기준점이 됨. */
+            position: relative;
+            top: 100px;
+            margin: 60px auto;
+            width: 500px;
+            height: 500px;
+            background-color: white;
+        }
+        .siba .face {
+            position: absolute;
+            background-color: var(--sec);
+            border:10px solid black;
+            border-radius: 50%;
+            width:200px;
+            height: 200px;
+            top:80px;
+            left:100px;
+
+        }
+        .siba .ear {
+            
+            position:absolute;
+            top:20px;
+            width:100px;
+            height:100px;
+            border:1px solid var(---sec);
+            border-radius: 0% 100% 46% 54% / 0% 27% 73% 100%  ;
+            background-color: var(--sec);
+        }
+
+        /* .siba .ear.left {
+            top: 35px;
+            left:85px;
+            transform: rotate(-30deg);
+            border-radius: 70% 50% 0 0;
+            box-shadow: 0 0 20px rgba(0,0,0 0.5);
+            animation: 귀왼쪽 .3s infinite  alternate;
+        }
+        .siba .ear.right {
+            top: 35px;
+            right:85px;
+            transform: rotate(30deg);
+            border-radius: 50% 70% 0 0;
+            box-shadow: 0 0 20px rgba(0,0,0 0.5);
+            animation: 귀오른쪽 .3s infinite  alternate;
+        } */
+    </style>
+</head>
+<body>  
+    <div class="siba">
+        <div class="ear left"> 
+            <div class="earline right"></div>
+        </div>    
+        <div class="ear right">
+            <div class="earline left"></div>
+         </div>
+    </div>
+</body>
+</html>
