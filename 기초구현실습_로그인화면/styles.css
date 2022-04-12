@@ -39,7 +39,7 @@ a {
     color: #000000;
 }
 
-.main .login {
+/* .main .login {
     height: 40px;
     width: 318px;
     border:1px solid #711BFF;
@@ -50,15 +50,21 @@ a {
     color:white;
     line-height: 50%;
     position: relative;
+} */
+
+.main button {
+    height: 18px;
+    width: 102px;
+    border: 0;
+    background-color: #711BFF;
+    border-radius: 4px;
+    margin-left:16px;
+    margin-top:15px;
+    color:white;
+    text-align: center;
 }
 
-.main img {
-    position:absolute;
-    left:108px;
-    top:10px;
-    width: 50px;
-    height: 18px;
-}
+
 .login a {
     color:white;
     position:absolute;
