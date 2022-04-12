@@ -7,16 +7,54 @@
     <title>siba</title>
     <style>
         /* animaion */ 
+        @keyframes 손오른쪽 {
+            from {
+                transform: rotate(10deg);
+            }
+            to {
+                transform: rotate(-10deg) translate(0px);
+            }
+        }
+        @keyframes 귀오른쪽 {
+            from {
+                transform: rotate(10deg);
+            }
+            to {
+                transform: rotate(-10deg);
+            }
+        }
+        @keyframes 귀왼쪽 {
+            from {
+                transform: rotate(-10deg);
+            }
+            to {
+                transform: rotate(10deg) ;
+            }
+        }
         /* setting */
         :root {
             --pri: #CE705F;
             --sec: #ECD376;
-            --sec2: rgb(243, 229, 183);
+            --sec2: rgb(238, 233, 218);
         }
         /* reset */
         body {
             margin: 0;
             padding: 0;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        h1 {
+            font-size:80px;
+            text-align:center;
+            font-weight: 800;
+            color: white;
         }
         /* layout */
         /* design */
@@ -27,7 +65,7 @@
         }
         
         body {
-            background: rgb(211, 146, 173);
+            background: rgb(230, 207, 189);
         }
         .siba {
             /* absolute에 기준점이 됨. */
@@ -36,7 +74,6 @@
             margin: 60px auto;
             width: 500px;
             height: 500px;
-
         }
         .siba .ear {          
             position:absolute;
@@ -51,11 +88,13 @@
             top: 200px;
             left:1px;
             border-radius: 0% 100% 46% 54% / 0% 27% 73% 100% ;
+            animation: 귀왼쪽 .5s infinite  alternate;
         }
         .siba .ear.right {
             top: 200px;
             right:1px;
             border-radius:100% 0% 46% 54% / 27% 0% 100% 73% ;
+            animation: 귀오른쪽 .5s infinite  alternate;
         }
         .earline {
             position:absolute;
@@ -76,6 +115,165 @@
             right:7px;
             border-radius:100% 0% 58% 42% / 49% 0% 100% 51% ;
         }
+        .siba .body {
+            position: absolute;
+            top:400px;
+            left:20.5px;
+            background-color: var(--sec2);
+            border:1px solid var(--sec2);
+            width:450px;
+            height: 450px;
+            border-radius: 40% ;
+        }
+        .body .armleft {
+            position: absolute;
+            top:160px;
+            left:8px;
+            background-color: var(--sec);
+            border-left: 1px solid rgb(94, 65, 13) ;
+            border-right: 1px solid rgb(94, 65, 13) ;
+            width:119px;
+            height:110px;
+            z-index: 1;
+        }
+        .armleft .left {
+            position: absolute;
+            top:-90px;
+            left:-6px;
+            background-color: var(--sec2);
+            border:1px solid rgb(94, 65, 13);
+            border-bottom: 1px solid var(--sec2);
+            width:120px;
+            height:100px;
+            border-radius: 50% 50% 0% 0%;
+            z-index: 1;
+            transform: rotate(-5deg);
+        }
+        .body .armright {
+            position: absolute;
+            top:160px;
+            right:12px;
+            background-color: var(--sec);
+            border-right: 1px solid rgb(94, 65, 13) ;
+            border-left: 1px solid rgb(94, 65, 13) ;
+            width:119px;
+            height:110px;
+            z-index: 1;
+            animation: 손오른쪽 .8s infinite  alternate;
+        }
+        .armright .right {
+            position: absolute;
+            top:-90px;
+            left:4px;
+            background-color: var(--sec2);
+            border:1px solid rgb(94, 65, 13);
+            border-bottom: 1px solid var(--sec2);
+            width:120px;
+            height:100px;
+            border-radius: 50% 50% 0% 0%;
+            z-index: 1;
+            transform: rotate(5deg);
+        }
+        .body .bodyleft {
+            position: absolute;
+            top:55px;
+            left:-1px;
+            background-color: var(--sec);
+            border:1px solid var(--sec);
+            width:130px;
+            height: 300px;
+        }
+        .body .bottomleft {
+            position: absolute;
+            top:185px;
+            left: -3px;
+            background-color: var(--sec);
+            border:1px solid var(--sec);
+            border-radius: 40% 50% 10% 50%;
+            width:155px;
+            height: 250px;
+        }
+        .body .bodyright {
+            position: absolute;
+            top:55px;
+            left:320px;
+            background-color: var(--sec);
+            border:1px solid var(--sec);
+            width:130px;
+            height: 300px;
+        }
+        .body .bottomright {
+            position: absolute;
+            top:185px;
+            left: 300px;
+            background-color: var(--sec);
+            border:1px solid var(--sec);
+            width:155px;
+            height: 250px;
+            border-radius: 50% 40% 50% 10%;
+        }
+        .body .legleft {
+            position: absolute;
+            top:300px;
+            left: 20px;
+            background-color: var(--sec);
+            border:1px solid var(--sec);
+            width:150px;
+            height:180px;
+            border-radius:  30% 30% 12% 30%;
+        }
+        .kneeleft {
+            position: absolute;
+            top:280px;
+            background-color: var(--sec);
+            border-top:3px solid rgb(94, 65, 13);
+            width:150px;
+            height:90px;
+            border-radius:  10% 50% 10% 0%;
+            left: 20px;
+        }
+        .kneeright {
+            position: absolute;
+            top:280px;
+            background-color: var(--sec);
+            border-top:3px solid rgb(94, 65, 13);
+            width:150px;
+            height:90px;
+            border-radius:  10% 50% 10% 0%;
+            right: 20px;
+            transform:scaleX(-1);
+        }
+        .body .legright{
+            position: absolute;
+            top:300px;
+            left: 280px;
+            background-color: var(--sec);
+            border:1px solid var(--sec);
+            width:150px;
+            height:180px;
+            border-radius: 30% 30% 12% 30%;
+        }
+        .body .leg_left_bottom {
+            position: absolute;
+            top:125px;
+            left: 0px;
+            background-color: var(--sec2);
+            border:1px solid var(--sec2);
+            width:150px;
+            height:55px;
+            border-radius: 20% 50% 25% 20%;
+        }
+        .body .leg_right_bottom {
+            position: absolute;
+            top:123px;
+            right: 0px;
+            background-color: var(--sec2);
+            border:1px solid var(--sec2);
+            width:150px;
+            height:55px;
+            border-radius: 20% 50% 25% 20%;
+            transform: scaleX(-1);
+        }
         .siba .face {
             position: absolute;
             background-color: var(--sec);
@@ -85,7 +283,7 @@
             height: 350px;
             top:200px;
             left:20.5px;
-
+            margin-top:0px;
         }
 
         .faceline {
@@ -143,28 +341,32 @@
             
             border-radius: 76% 24% 53% 47% / 59% 24% 76% 41% ;
             left:110px;
+            animation: 눈오른쪽 .8s infinite  alternate;
         }
 
         .eye.right {
             border-radius:23% 77% 50% 50% / 41% 60% 40% 59% ;
             right: 115px;
+            animation: 눈오른쪽 .2s infinite  alternate;
         }
 
         .eye.inleft {
             width:65px;
-            height: 30px;
+            height: 43px;
             background-color: black;
             border: 1px solid black;
             border-radius: 56% 44% 62% 38% / 73% 53% 47% 27%  ;
             left:-5px;
+            animation: 눈왼쪽 .8s infinite  alternate;
         }
         .eye.inright{
             width:65px;
-            height: 30px;
+            height: 43px;
             background-color: black;
             border: 1px solid black;
             border-radius: 38% 62% 56% 44% / 47% 70% 30% 53%  ;
             right:1px;
+            animation: 눈오른쪽 .8s infinite  alternate;
         }
         .inleft.dotleft {
             position: absolute;
@@ -186,7 +388,7 @@
             left:25px;
             top:6px; 
         }
-        .inleft.dotright {
+        .inright.dotright {
             position: absolute;
             width:15px;
             height: 15px;
@@ -196,7 +398,7 @@
             right:40px;
             top:6px;
         }
-        .inleft.dotwright {
+        .inright.dotwright {
             position: absolute;
             width:7px;
             height: 7px;
@@ -229,76 +431,163 @@
 
         .mouth {
             position :absolute;
-            width:130px;
-            height: 100px;
+            width:250px;
+            height: 110px;
             border : 3px solid black;
-            border-radius: 50%;
             top:210px;
-            left:160px;
+            left:100px;
             background-color: black;
+            border-radius:50% 50% 48% 52% / 11% 13% 87% 89% ;
         }
-        .mouth.eraser {
-            width:172px;
-            height: 100px;
+
+        .mouth.top_left_eraser {
+            position :absolute;
+            width:130px;
+            height: 40px;
+            top:-25px;
+            left:-15px;
             border : 1px solid var(--sec2);
-            border-radius: 50%;
-            top:8px;
-            left:-20px;
             background-color: var(--sec2);
+            border-radius:50%;
         }
-        /* .mouth.leftsmile {
-            width:39px;
-            height: 32px;
-            border : 1px solid black;
-            border-radius: 50%;
-            top:-15px;
-            left:-13px;
-            background-color: black;
-            transform: rotate(39deg);
-        } */
-        /* .leftsmile.lefteraser1 {
+        .mouth.top_right_eraser {
             position :absolute;
-            width:30px;
-            height: 25px;
+            width:135px;
+            height: 40px;
+            top:-25px;
+            left:125px;
             border : 1px solid var(--sec2);
-            border-radius: 50%;
-            top:-7px;
-            left:6px;
             background-color: var(--sec2);
-            transform: rotate(-5deg);
-        } */
-        /* .leftsmile.lefteraser2 {
+            border-radius:50%;
+        }
+        .mouth.bottom_left_eraser {
             position :absolute;
-            width:22px;
-            height: 15px;
-            border : 0px solid white;
-            border-radius: 100% 0% 100% 0% / 53% 100% 0% 47% ;
+            top:6px;
+            left:-25px;
+            width:50px;
+            height: 80px;
+            border : 1px solid var(--sec2);
             background-color: var(--sec2);
-            top:24px;
-            left:26px;
-            transform: rotate(-50deg);
-        } */
-        /* .leftsmile.lefteraser3 {
+            border-radius:50%;
+            transform: rotate(-7deg);
+        }
+        
+        .mouth .teethleft {
             position :absolute;
-            width:5px;
-            height: 8px;
-            border : 0px solid white;
-            border-radius: 100% 0% 100% 0% / 53% 100% 0% 47% ;
-            background-color: var(--sec2);
+            top:18px;
+            left:60px;
+            width:20px;
+            height: 63px;
+            border : 1px solid white;
+            background-color: white;
+            border-radius: 0% 100% 0% 100% / 69% 32% 68% 31%  ;
+        }
+        .mouth .teethright {
+            position :absolute;
+            top:18px;
+            right:60px;
+            width:20px;
+            height: 63px;
+            border : 1px solid white;
+            background-color: white;
+            border-radius: 0% 100% 0% 100% / 69% 32% 68% 31%  ;
+            transform: scaleX(-1);
+        }
+        .mouth .tongueleft {
+            position :absolute;
             top:25px;
-            left:30px;
-            transform: rotate(-134deg);
-        } */
+            left:65px;
+            width:60px;
+            height: 58px;
+            border : 1px solid rgb(204, 77, 77);
+            background-color: rgb(204, 77, 77);
+            border-radius: 30% 40% 20% 30%;
+        }
+        .mouth .tongueright{
+            position :absolute;
+            top:25px;
+            left:120px;
+            width:60px;
+            height: 58px;
+            border : 1px solid rgb(204, 77, 77);
+            background-color: rgb(204, 77, 77);
+            border-radius: 30% 40% 20% 30%;
+            transform: scaleX(-1);
+        }
+        .face .cheek_left_left {
+            position:absolute;
+            top:150px;
+            left:50px;
+            width:30px;
+            height:30px;
+            border:1px solid rgb(253, 181, 193);
+            background-color: rgb(253, 181, 193);
+            border-radius: 48% 52% 0% 100% / 41% 40% 60% 59% ;
+        }
+        .face .cheek_left_right{
+            position:absolute;
+            top:150px;
+            left:70px;
+            width:30px;
+            height:30px;
+            border:1px solid rgb(253, 181, 193);
+            background-color: rgb(253, 181, 193);
+            border-radius: 48% 52% 0% 100% / 41% 40% 60% 59% ;
+            transform: scaleX(-1);
+        }
+        .face .cheek_right_left {
+            position:absolute;
+            top:150px;
+            right:70px;
+            width:30px;
+            height:30px;
+            border:1px solid rgb(253, 181, 193);
+            background-color: rgb(253, 181, 193);
+            border-radius: 48% 52% 0% 100% / 41% 40% 60% 59% ;
+        }
+        .face .cheek_right_right{
+            position:absolute;
+            top:150px;
+            right:50px;
+            width:30px;
+            height:30px;
+            border:1px solid rgb(253, 181, 193);
+            background-color: rgb(253, 181, 193);
+            border-radius: 48% 52% 0% 100% / 41% 40% 60% 59% ;
+            transform: scaleX(-1);
+        }
+        
     </style>
 </head>
 <body>  
     <div class="siba">
+        <h1>안녕하시바~</h1>
         <div class="ear left"> 
             <div class="earline left"></div>
         </div>    
         <div class="ear right">
             <div class="earline right"></div>
             </div>
+        <div class="body">
+            <div class="body bodyleft"></div>
+            <div class="body bodyright"></div>
+            <div class="body bottomleft"></div>
+            <div class="body bottomright"></div>
+            <div class="legleft">
+                <div class="leg_left_bottom"></div>
+            </div>
+            <div class="legright">
+                <div class="leg_right_bottom"></div>
+            </div>
+            <div class="armleft">
+                <div class="armleft left"></div>
+            </div>
+            <div class="armright">
+                <div class="armleft right"></div>
+            </div>
+            <div class="kneeleft"></div>
+            <div class="kneeright"></div>
+        </div>
             <div class="face">
                 <div class="faceline one"></div>
                 <div class="faceline two"></div>
@@ -312,15 +601,24 @@
                 </div>
                 <div class="eye right">
                     <div class="eye inright">
-                    <div class="inleft dotright"></div>
-                    <div class="inleft dotwright"></div>
+                    <div class="inright dotright"></div>
+                    <div class="inright dotwright"></div>
                     </div>
                 </div>
+                <div class="cheek_left_left"></div>
+                <div class="cheek_left_right"></div>
+                <div class="cheek_right_left"></div>
+                <div class="cheek_right_right"></div>
             <div class="nose">
                 <div class="nose line"></div>
             </div> 
             <div class="mouth">
-                <div class="mouth eraser"></div>
+                <div class="mouth top_left_eraser"></div>
+                <div class="mouth top_right_eraser"></div>
+                <div class="tongueleft"></div>
+                <div class="tongueright"></div>
+                <div class="teethleft"></div>
+                <div class="teethright"></div>                
                 </div>
             </div>
     </div>
