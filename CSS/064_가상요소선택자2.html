@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        p {
+            position: relative;
+            border: 5px solid blue;
+            top: 20px;
+            left: 20px;
+        }
+
+        p::before {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            content: '';
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        p::after {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            content: '';
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <p>hello <span>world</span></p>
+</body>
+</html>

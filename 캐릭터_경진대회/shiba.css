@@ -1,0 +1,567 @@
+/* animation */
+@keyframes 손오른쪽 {
+    from {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(-10deg) translate(0px);
+    }
+}
+@keyframes 귀오른쪽 {
+    from {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
+}
+@keyframes 귀왼쪽 {
+    from {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(10deg) ;
+    }
+}
+/* setting */
+:root {
+    --body: #ECD376;
+    --fur: rgb(238, 233, 218);
+    --border :rgb(94, 65, 13);
+}
+/* reset */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* design */
+/* 제목 꾸미기 */
+h1 {
+    font-family: 'Gothic A1', sans-serif;
+    font-size:80px;
+    text-align:center;
+    font-weight: 900;
+    color: white;
+}
+
+
+
+/* 뒷 배경 색깔 */
+body {
+    background: rgb(230, 207, 189);
+}
+
+/* 위치 조정 */
+.siba {
+    position: relative;
+    top: 100px;
+    margin: -50px auto;
+    width: 500px;
+    height: 500px;
+}
+
+/* 시바견 ear */
+.siba .ear {          
+    position:absolute;
+    top:0px;
+    width:150px;
+    height:150px;
+    border:1px solid var(---body);
+    border-radius:50%;
+    background-color: var(--body);
+}
+.siba .ear.left {
+    top: 200px;
+    left:1px;
+    border-radius: 0% 100% 46% 54% / 0% 27% 73% 100% ;
+    animation: 귀왼쪽 .5s infinite  alternate;
+}
+.siba .ear.right {
+    top: 200px;
+    right:1px;
+    border-radius:100% 0% 46% 54% / 27% 0% 100% 73% ;
+    animation: 귀오른쪽 .5s infinite  alternate;
+}
+.earline {
+    position:absolute;
+    top:0px;
+    width:70px;
+    height:90px;
+    border:1px solid var(---fur);
+    background-color: var(--fur);
+}
+
+.earline.left {
+    top: 10px;
+    left:7px;
+    border-radius: 0% 100% 58% 42% / 0% 49% 51% 100% ;
+}
+.earline.right {
+    top: 10px;
+    right:7px;
+    border-radius:100% 0% 58% 42% / 49% 0% 100% 51% ;
+}
+/* 시바견 body */
+.siba .body {
+    position: absolute;
+    top:400px;
+    left:20.5px;
+    background-color: var(--fur);
+    border:1px solid var(--fur);
+    width:450px;
+    height: 450px;
+    border-radius: 40% ;
+}
+/* 시바견 arm */
+.body .armleft {
+    position: absolute;
+    top:160px;
+    left:8px;
+    background-color: var(--body);
+    border-left: 1px solid rgb(94, 65, 13) ;
+    border-right: 1px solid rgb(94, 65, 13) ;
+    width:119px;
+    height:110px;
+    z-index: 1;
+}
+.armleft .left {
+    position: absolute;
+    top:-91px;
+    left:-6px;
+    background-color: var(--fur);
+    border:1px solid var(--border);
+    border-bottom: 1px solid var(--fur);
+    width:120px;
+    height:100px;
+    border-radius: 50% 50% 0% 0%;
+    z-index: 1;
+    transform: rotate(-5deg);
+}
+.body .armright {
+    position: absolute;
+    top:160px;
+    right:12px;
+    background-color: var(--body);
+    border-right: 1px solid var(--border) ;
+    border-left: 1px solid var(--border) ;
+    width:120px;
+    height:110px;
+    z-index: 1;
+    animation: 손오른쪽 .8s infinite  alternate;
+}
+.armright .right {
+    position: absolute;
+    top:-91px;
+    left:3px;
+    background-color: var(--fur);
+    border:1px solid var(--border);
+    border-bottom: 1px solid var(--fur);
+    width:120px;
+    height:100px;
+    border-radius: 50% 50% 0% 0%;
+    z-index: 1;
+    transform: rotate(5deg);
+}
+/* body 부분 부분에 색깔 넣기 위한 css */
+.body .bodyleft {
+    position: absolute;
+    top:55px;
+    left:-1px;
+    background-color: var(--body);
+    border:1px solid var(--body);
+    width:130px;
+    height: 300px;
+}
+.body .bottomleft {
+    position: absolute;
+    top:185px;
+    left: -3px;
+    background-color: var(--body);
+    border:1px solid var(--body);
+    border-radius: 40% 50% 10% 50%;
+    width:155px;
+    height: 250px;
+}
+.body .bodyright {
+    position: absolute;
+    top:55px;
+    left:320px;
+    background-color: var(--body);
+    border:1px solid var(--body);
+    width:130px;
+    height: 300px;
+}
+.body .bottomright {
+    position: absolute;
+    top:185px;
+    left: 300px;
+    background-color: var(--body);
+    border:1px solid var(--body);
+    width:155px;
+    height: 250px;
+    border-radius: 50% 40% 50% 10%;
+}
+/* 시바견 leg */
+.body .legleft {
+    position: absolute;
+    top:300px;
+    left: 20px;
+    background-color: var(--body);
+    border:1px solid var(--body);
+    width:150px;
+    height:180px;
+    border-radius:  30% 30% 12% 30%;
+}
+
+.body .legright{
+    position: absolute;
+    top:300px;
+    left: 280px;
+    background-color: var(--body);
+    border:1px solid var(--body);
+    width:150px;
+    height:180px;
+    border-radius: 30% 30% 12% 30%;
+}
+.body .leg_left_bottom {
+    position: absolute;
+    top:125px;
+    left: 0px;
+    background-color: var(--fur);
+    border:1px solid var(--fur);
+    width:150px;
+    height:55px;
+    border-radius: 20% 50% 25% 20%;
+}
+.body .leg_right_bottom {
+    position: absolute;
+    top:123px;
+    right: 0px;
+    background-color: var(--fur);
+    border:1px solid var(--fur);
+    width:150px;
+    height:55px;
+    border-radius: 20% 50% 25% 20%;
+    transform: scaleX(-1);
+}
+
+/* 시바견 knee */
+.kneeleft {
+    position: absolute;
+    top:280px;
+    background-color: var(--body);
+    border-top:3px solid var(--border);
+    width:150px;
+    height:90px;
+    border-radius:  10% 50% 10% 0%;
+    left: 20px;
+}
+
+.kneeright {
+    position: absolute;
+    top:280px;
+    background-color: var(--body);
+    border-top:3px solid var(--border);
+    width:150px;
+    height:90px;
+    border-radius:  10% 50% 10% 0%;
+    right: 20px;
+    transform:scaleX(-1);
+}
+/* 시바견 face */
+.siba .face {
+    position: absolute;
+    background-color: var(--body);
+    border:1px solid var(--body);
+    border-radius: 50%;
+    width:450px;
+    height: 350px;
+    top:200px;
+    left:20.5px;
+    margin-top:0px;
+}
+
+.faceline {
+    position:absolute;
+    top:0px;
+    width:200px;
+    height:200px;
+    border:1px solid var(---fur);
+    background-color: var(--fur);
+}
+.faceline.one {
+    top: 115px;           
+    width:210px;
+    left:0px;
+    border-radius:48% 52% 44% 56% / 36% 63% 37% 63% ;
+
+}
+.faceline.two {
+    width:280px;
+    height: 240px;
+    top: 100px;
+    left:80px;
+    border-radius: 50%;
+}
+.faceline.three {
+    top: 115px;
+    right:0px;
+    width: 260px;
+    border-radius: 52% 48% 44% 56% / 63% 36% 67% 37%;
+}
+.faceline.four {
+    background-color:var(--fur);
+    top: 119px;
+    width:415px;
+    height:230px;
+    left:18px;
+    border-radius:49% 51% 50% 50% / 49% 49% 51% 51% ;
+}
+
+/* 시바견 eye */
+.face .eye{
+    position: absolute;
+    top:38px;
+    width:70px;
+    height:70px;
+    background-color:var(--fur);
+    border:1px solid var(--fur);
+}
+
+
+.eye.left {
+    
+    border-radius: 76% 24% 53% 47% / 59% 24% 76% 41% ;
+    left:110px;
+    animation: 눈오른쪽 .8s infinite  alternate;
+}
+
+.eye.right {
+    border-radius:23% 77% 50% 50% / 41% 60% 40% 59% ;
+    right: 115px;
+    animation: 눈오른쪽 .2s infinite  alternate;
+}
+
+.eye.inleft {
+    width:65px;
+    height: 43px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 56% 44% 62% 38% / 73% 53% 47% 27%  ;
+    left:-5px;
+    animation: 눈왼쪽 .8s infinite  alternate;
+}
+.eye.inright{
+    width:65px;
+    height: 43px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 38% 62% 56% 44% / 47% 70% 30% 53%  ;
+    right:1px;
+    animation: 눈오른쪽 .8s infinite  alternate;
+}
+.inleft.dotleft {
+    position: absolute;
+    width:15px;
+    height: 15px;
+    border: 1px solid white;
+    border-radius:50% ;
+    background-color: white;
+    left:40px;
+    top:6px;
+}
+.inleft.dotwleft {
+    position: absolute;
+    width:7px;
+    height: 7px;
+    border: 1px solid white;
+    border-radius:50% ;
+    background-color: white;
+    left:25px;
+    top:6px; 
+}
+.inright.dotright {
+    position: absolute;
+    width:15px;
+    height: 15px;
+    border: 1px solid white;
+    border-radius:50% ;
+    background-color: white;
+    right:40px;
+    top:6px;
+}
+.inright.dotwright {
+    position: absolute;
+    width:7px;
+    height: 7px;
+    border: 1px solid white;
+    border-radius:50% ;
+    background-color: white;
+    right:25px;
+    top:6px; 
+}
+/* 시바견 nose */
+.face .nose {
+    position: absolute;
+    top:110px;
+    width:95px;
+    height:80px;
+    left:175px;
+    background-color:black;
+    border:1px solid black;
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%  ;
+}
+
+.nose.line {
+    position: absolute;
+    top:75px;
+    width:10px;
+    height:30px;
+    left:42px; 
+    border-radius: 100% 0% 100% 0% / 0% 100% 0% 100% ;
+}
+
+/* 시바견 mouth */
+.mouth {
+    position :absolute;
+    width:250px;
+    height: 110px;
+    border : 3px solid black;
+    top:210px;
+    left:100px;
+    background-color: black;
+    border-radius:50% 50% 48% 52% / 11% 13% 87% 89% ;
+}
+
+.mouth.top_left_eraser {
+    position :absolute;
+    width:130px;
+    height: 40px;
+    top:-25px;
+    left:-15px;
+    border : 1px solid var(--fur);
+    background-color: var(--fur);
+    border-radius:50%;
+}
+.mouth.top_right_eraser {
+    position :absolute;
+    width:135px;
+    height: 40px;
+    top:-25px;
+    left:125px;
+    border : 1px solid var(--fur);
+    background-color: var(--fur);
+    border-radius:50%;
+}
+.mouth.bottom_left_eraser {
+    position :absolute;
+    top:6px;
+    left:-25px;
+    width:50px;
+    height: 80px;
+    border : 1px solid var(--fur);
+    background-color: var(--fur);
+    border-radius:50%;
+    transform: rotate(-7deg);
+}
+/* 시바견 teeth */
+.mouth .teethleft {
+    position :absolute;
+    top:18px;
+    left:60px;
+    width:20px;
+    height: 63px;
+    border : 1px solid white;
+    background-color: white;
+    border-radius: 0% 100% 0% 100% / 69% 32% 68% 31%  ;
+}
+.mouth .teethright {
+    position :absolute;
+    top:18px;
+    right:60px;
+    width:20px;
+    height: 63px;
+    border : 1px solid white;
+    background-color: white;
+    border-radius: 0% 100% 0% 100% / 69% 32% 68% 31%  ;
+    transform: scaleX(-1);
+}
+/* 시바견 tongue */
+.mouth .tongueleft {
+    position :absolute;
+    top:25px;
+    left:65px;
+    width:60px;
+    height: 58px;
+    border : 1px solid rgb(204, 77, 77);
+    background-color: rgb(204, 77, 77);
+    border-radius: 30% 40% 20% 30%;
+}
+.mouth .tongueright{
+    position :absolute;
+    top:25px;
+    left:120px;
+    width:60px;
+    height: 58px;
+    border : 1px solid rgb(204, 77, 77);
+    background-color: rgb(204, 77, 77);
+    border-radius: 30% 40% 20% 30%;
+    transform: scaleX(-1);
+}
+/* 시바견 cheek */
+.face .cheek_left_left {
+    position:absolute;
+    top:150px;
+    left:50px;
+    width:30px;
+    height:30px;
+    border:1px solid rgb(253, 181, 193);
+    background-color: rgb(253, 181, 193);
+    border-radius: 48% 52% 0% 100% / 41% 40% 60% 59% ;
+}
+.face .cheek_left_right{
+    position:absolute;
+    top:150px;
+    left:70px;
+    width:30px;
+    height:30px;
+    border:1px solid rgb(253, 181, 193);
+    background-color: rgb(253, 181, 193);
+    border-radius: 48% 52% 0% 100% / 41% 40% 60% 59% ;
+    transform: scaleX(-1);
+}
+.face .cheek_right_left {
+    position:absolute;
+    top:150px;
+    right:70px;
+    width:30px;
+    height:30px;
+    border:1px solid rgb(253, 181, 193);
+    background-color: rgb(253, 181, 193);
+    border-radius: 48% 52% 0% 100% / 41% 40% 60% 59% ;
+}
+.face .cheek_right_right{
+    position:absolute;
+    top:150px;
+    right:50px;
+    width:30px;
+    height:30px;
+    border:1px solid rgb(253, 181, 193);
+    background-color: rgb(253, 181, 193);
+    border-radius: 48% 52% 0% 100% / 41% 40% 60% 59% ;
+    transform: scaleX(-1);
+}

@@ -1,110 +1,112 @@
-* {
-    font-family: 'Roboto', sans-serif;
-  }
-
-body ,p { 
-    margin:0;
+body,h2,p {
     padding:0;
-}
-
-h1 {
     margin:0;
-    padding: 0;
-    font-size: inherit;
-    font-weight: inherit;
 }
 
-a {
-    text-decoration: none;
-}
-.wrapper {
-    background-color: #FFFFFF;
-    width: 350px;
-    height: 140px;
-    border:1px solid #DBDBDB;
-    margin:20% auto;
-    border-radius: 5px;
-}
-
-.header {
-    width: 215px;
-    height: 15px;
-    margin-top: 20px;
-    margin-left: 16px;
-}
-.header h1 {
-    font-weight: 400;
-    font-size:12px;   
-    line-height: 15.02px;
-    color: #000000;
-}
-
-/* .main .login {
-    height: 40px;
-    width: 318px;
-    border:1px solid #711BFF;
-    background-color: #711BFF;
-    border-radius: 4px;
-    margin-left:16px;
-    margin-top:15px;
-    color:white;
-    line-height: 50%;
-    position: relative;
-} */
-
-.main button {
-    height: 18px;
-    width: 102px;
-    border: 0;
-    background-color: #711BFF;
-    border-radius: 4px;
-    margin-left:16px;
-    margin-top:15px;
-    color:white;
-    text-align: center;
-}
-
-
-.login a {
-    color:white;
+.blind {
     position:absolute;
-    top:13px;
-    left:176px;
-    padding-top:3px;
-    margin-left:7px;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+.cont-login {
+    border: 1px solid #DBDBDB;
+    margin:20% auto;
+    padding:15px 19px 17px;
+    width:350px;
+
 }
 
-.check ,.join {
-    display:inline-block;
-    color:#767676;
+.cont-login::after{
+
+    content:'';
+    display:block;
+    clear:both; 
+}
+
+.txt-login {
     font-size: 12px;
     font-weight: 400;
     line-height: 15px;
     letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 16px;
 }
 
-.info-text {
-    font-size:12px;
-    font-weight: 400;
-    /* text-align: left; */
-    color: #282828;
-    float: left;
+.btn-login {
+    /* a 태그는 인라인 요소다. */
+    display: block;
+    background-color:  #711BFF;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px 0px 12px;
+    text-decoration:none;
+    color:white;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0em;
+    margin-bottom: 17px;
 }
 
-.join-text {
+.img-logo {
+    vertical-align:-3px;
+}
+.find-icon {
+    float:left;
+}
+.find-login {
+    float:left;
+}
+
+.find-id {
+    float:left;
     font-size: 12px;
     font-weight: 400;
-    padding-left:10px;
-    float: right;
-    /* float는 둥둥떠다니다: 왼쪽과 오른쪽으로 떠다닌다는 소리 
-    float 는 둥둥 떠다니기 때문에 다른 요소와 겹칠 수 o 다른 요소와 신경을 안씀 가두리를 만들어줘야함*/
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-decoration: none;
+    margin-left:4px;
+    color: #767676;
+}
+.find-id::after {
+    float:right;
+    display: block;
+    content: '';
+    width:1px;
+    height:12px;
+    background-color: #767676;
+    margin: 0px 4px 0px;
 }
 
-.float-wrap {
-    overflow: hidden;
-    color:#767676;
-    margin-top: 18px;
-    margin-left:36px;
-    margin-right: 16px;
-    /* float 요소들 다 묶어주고  그 다음에 오는 html 요소가 float에 영향 받지 않도록 해줌 */
+.find-pwd {
+    float:left;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-decoration: none;
+    color: #767676;
+
+}
+.join-login {
+    float:right;
+    
+}
+
+.join-user {
+    float:left;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-decoration: none;
+    color: #767676;
+    margin-left:4px;
+}
+.join-icon {
+    float:left;
+
 }
