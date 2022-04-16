@@ -1,0 +1,28 @@
+article {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    
+}
+
+.question {
+    display:none;
+}
+
+.result {
+    display:none;
+}
+
+#img {
+    width:300px;
+    height:300ox;
+    margin:0 auto;
+}
+
+.share {
+    margin:0 auto;
+}

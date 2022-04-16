@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -40,4 +40,113 @@
         </tfoot>
       </table>
 </body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 scope</title>
+</head>
+<body>
+  <table>
+    <caption>요일별 급식 만족도</caption>
+    <tbody>
+      <tr>
+        <th></th>
+        <th scope="col">월요일</th>
+        <th scope="col">화요일</th>
+        <th scope="col">수요일</th>
+        <th scope="col">목요일</th>
+        <th scope="col">금요일</th>
+        <th scope="col">토요일</th>
+      </tr>      
+      <tr>
+        <th scope="row">메뉴</th>
+        <td>돈까스</td>
+        <td>짜장면</td>
+        <td>볶음밥</td>
+        <td>해물라면</td>
+        <td>잔치국수</td>
+        <td>떡볶이</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row">만족도</th>
+        <td>3/5</td>
+        <td>4/5</td>
+        <td>1/5</td>
+        <td>5/5</td>
+        <td>2/5</td>
+        <td>3/5</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      col:nth-child(1) {
+        background-color: aqua;
+      }
+      .info {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <colgroup>
+          <col span="1">
+          <col span="2" class="info">
+        </colgroup>
+        <tr>
+          <th>구분</th>
+          <th>이름</th>
+          <th>판매량</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>해리포터</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>헝거게임</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>반지의제왕</td>
+          <td>300</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td >총 판매량</td>
+          <td>600</td>
+          <td>300</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
 </html>
