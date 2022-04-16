@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <style> 
-    li .one {
-        color: red;
-    }
-    l.one {
-        color:green;
-    }
+    <title>형제 선택자</title>
+    <style>
+        h1 ~ ul {
+            color:red;
+        }
     </style>
 </head>
 <body>
     <ul>
-        <li>helloworld</li>
-        <li>helloworld</li>
-        <li>helloworld</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
     </ul>
+    <h1>hello world</h1>
+    <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+    <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+    <h2>hello world</h2>
+    <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+    <div>
+        <ul>
+            <li>hello world</li>
+            <li>hello world</li>
+            <li>hello world</li>
+        </ul>
+    </div>
 </body>
 </html>

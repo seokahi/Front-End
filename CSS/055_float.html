@@ -27,9 +27,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ad, autem quaer
     <title>float</title>
     <style>
         figure {
-            float: left;
+            /* display: inline-block;
+            margin:0px; */
+            /* float: left;
             margin: 0 10px;
-            background-color: royalblue;
+            background-color: royalblue;  */
+            float:left;
+            margin:0px;
         }
     </style>
 </head>
@@ -75,30 +79,33 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ad, autem quaer
     <div class="fst">first</div>
     <div>second</div>
 </body>
-</html>
- -->
+</html> -->
+
 <!-- <!doctype html>
 <html>
 <head>
 <style>
-	.wrap{
+  .wrap{
     border: 4px solid blue;
-	}
-	.content{
+  }
+  .content{
     margin: 5px;
-		height: 20px;
-		border: 2px solid green;
-	}
+    height: 20px;
+    border: 2px solid green;
+  }
+  .content.one {
+      float:right;
+  }
 </style>
 </head>
 <body>
-		<div class="wrap">
-		    <div class="content">내용1</div>
-        <div class="content">내용2</div>
-		</div>
+    <div class="wrap">
+        <div class="content">내용1</div>
+            <div class="content one">내용2</div>
+    </div>
 </body>
 </html> -->
-<!doctype html>
+<!-- <!doctype html>
 <html>
 
 <head>
@@ -129,4 +136,36 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, ad, autem quaer
     </div>
 </body>
 
+</html> -->
+<!doctype html>
+<html>
+<head>
+<style>
+    .wrap{
+        border: 4px solid blue;
+    }
+    .wrap::after {
+        content:'';
+        display:block;
+        clear:both;
+    }
+    .content{
+        float:left;
+        margin: 5px;
+        height: 20px;
+        border: 2px solid green;
+    }
+    .content.one {
+        clear:both; /* both 속성은 left, right 둘 다 클리어 합니다. */
+        background-color:pink;
+    }
+
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="content">내용1</div>
+            <div class="content one">내용2</div>
+    </div>
+</body>
 </html>

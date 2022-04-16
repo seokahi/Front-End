@@ -1,99 +1,108 @@
-body,h2,p {
+
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+
+body {
+    margin:0;
+    padding:0;
+}
+
+h1 {
     padding:0;
     margin:0;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
-.blind {
-    position:absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
+a {
+    text-decoration:none;
 }
-.cont-login {
-    border: 1px solid #DBDBDB;
-    margin:20% auto;
-    padding:15px 19px 17px;
-    width:350px;
-
+.login {
+    width: 350px;
+    margin:30px auto;
+    border:1px solid #DBDBDB;
+    border-radius: 5px; 
+    padding:18px 15px 17px;
 }
 
-.cont-login::after{
-
-    content:'';
+.login::after {
+    content: '';
     display:block;
-    clear:both; 
+    clear: both;
 }
 
-.txt-login {
+.login .tit-login {
+    width: 215px;
     font-size: 12px;
     font-weight: 400;
     line-height: 15px;
     letter-spacing: 0em;
-    text-align: left;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 }
 
-.btn-login {
-    /* a 태그는 인라인 요소다. */
+.login .link-login {
+    background-color: #711BFF;
     display: block;
-    background-color:  #711BFF;
-    border-radius: 4px;
+    border:1px solid  #711BFF;
+    border-radius:4px;
+    padding:9px 0px 11px;
     text-align: center;
-    padding: 10px 0px 12px;
-    text-decoration:none;
-    color:white;
     font-size: 12px;
     font-weight: 500;
     line-height: 15px;
     letter-spacing: 0em;
-    margin-bottom: 17px;
+    color:white;
+    margin-bottom: 16px;
 }
 
-.img-logo {
-    vertical-align:-3px;
+.link-login .img-login {
+    vertical-align: bottom;
 }
-.find-icon {
-    float:left;
-}
-.find-login {
+
+.make-login {
     float:left;
 }
 
-.find-id {
+/* 이 코드를 안쓰면 오른쪽으로 감.*/
+.make-login .find-login {
+    float:left;
+}
+
+.make-login .find-id {
     float:left;
     font-size: 12px;
     font-weight: 400;
     line-height: 15px;
     letter-spacing: 0em;
-    text-decoration: none;
     margin-left:4px;
-    color: #767676;
+    color :#767676;
+
 }
-.find-id::after {
+
+.make-login .find-id::after {
+    /* 가려져서 안 보이는 듯,,?*/
     float:right;
-    display: block;
     content: '';
-    width:1px;
+    width: 1px;
     height:12px;
     background-color: #767676;
-    margin: 0px 4px 0px;
+    margin:0px 4px 0px ;
 }
 
-.find-pwd {
+.make-login .find-pwd {
     float:left;
     font-size: 12px;
     font-weight: 400;
     line-height: 15px;
     letter-spacing: 0em;
-    text-decoration: none;
-    color: #767676;
-
+    color :#767676;
 }
-.join-login {
+
+.make-user {
     float:right;
-    
+}
+
+.join-login {
+    float:left;
 }
 
 .join-user {
@@ -102,11 +111,11 @@ body,h2,p {
     font-weight: 400;
     line-height: 15px;
     letter-spacing: 0em;
-    text-decoration: none;
-    color: #767676;
+    color :#767676;
     margin-left:4px;
 }
-.join-icon {
-    float:left;
 
-}
+
+
+
+
