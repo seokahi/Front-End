@@ -44,14 +44,19 @@
 .language-list {
     display:none;
     width:100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border:1px solid #C4C4C4;
     border-radius: 10px;
     margin-top:10px;
+    overflow:hidden;
 }
 
+
 .language {
-    padding:12px 0 12px 17px;
+    width:183px;
+    padding:6px 9px;
+    margin:4px 7px;
     font-family: 'Roboto';
     font-size: 14px;
     font-weight: 400;
@@ -60,13 +65,11 @@
 }
 
 .language:hover {
-    width:183px;
+    border:1px solid  white;
+    border-radius:8px;
     background-color:#F8E4FF;
-    padding:6px 0 6px 9px;
-    margin:4px 7px;
-    border:1px solid #F8E4FF;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-radius: 8px;
 }
 
 #language-btn:checked ~ .language-list {
