@@ -199,6 +199,10 @@ a {
     margin-bottom: 10px;
 }
 
+.google-login::before {
+    background:url("Google__G__Logo\ 1.png");
+}
+
 .facebook {
     border: 1px solid #2D9CDB;
     border-radius: 5px;

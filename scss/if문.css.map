@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAuFA,AAAA,IAAI,CAAC;EACD,KAAK,EALG,KAAoB;CAM/B",
+    "sources": [
+        "if문.scss"
+    ],
+    "names": [],
+    "file": "if문.css"
+}

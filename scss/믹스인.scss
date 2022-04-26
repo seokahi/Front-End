@@ -1,0 +1,66 @@
+// @mixin one{
+//     width: 100px;
+//     height: 100px;
+//     color: white;
+//     @content;
+// }
+
+// a {
+//     @include one{
+//         background-color: black;
+//     }
+// }
+
+// @mixin two{
+//     width: 100px;
+//     height: 100px;
+//     color: white;
+// }
+
+// button {
+//     @include one;
+//     background-color: black;
+// }
+// .base-box {
+//     width: 100px;
+//     height: 100px;
+//     background-color: red
+// }
+
+// .box {
+//     @extend .base-box;
+//     border: 5px solid black;
+// }
+
+// %base1-box {
+//     width: 100px;
+//     height: 100px;
+//     background-color: red
+// }
+
+// .box1 {
+//     @extend %base1-box;
+//     border: 5px solid black;
+// }
+// .box {
+//     &:focus{} // 가상선택자
+//     &:hover{}
+//     &:active{}
+//     &:first-child{} 
+//     &:nth-child(2){}
+//     &::after{} // 가상요소
+//     &::before{} 
+// }
+ul {
+    li {
+        &:hover {
+            background: white;
+            cursor: pointer;
+                // 가상요소 
+        }
+        &:last-child {
+            border-bottom: 2px solid black;
+                // 가상클래스 
+        }
+        }
+    }
