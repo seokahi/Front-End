@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_string</title>
+</head>
+<body>
+    <script>
+        let txt='ABCDEFGHIJKLMNABC';
+        let number = '100';
+        let num=10;
+        let text_two = 'mon said \'hello world\'';
+        // 'hello world' 나오게 하려고 이스케이프 문자 사용
+        // let text_tw = "mon said 'hello world'";
+        //이렇게 사용해도됨
+        document.write(number + number, '<br>');
+        document.write(Number(number) + Number(number), '<br>');
+        document.write(parseInt(number) + parseInt(number), '<br>');
+        //parseInt가  number가 안정성면에서 더 좋다.
+        document.write(+number + +number,'<br>');
+        //숫자로  써져있을 땐 +만 붙이는게 더 편함.
+        document.write(`txt: $ {txt}`,'<br>');
+
+
+        //자바스크립트는 문맥상 숫자일 수 밖에 없다고 인식하면 숫자로 인식
+        document.write(number + number, '<br>');
+        document.write(number + 10, '<br>');
+        document.write(number - 10, '<br>');
+        document.write(number * 10, '<br>');
+        //100+100 = 200 표현
+        document.write(`${number} + ${number} = ${number*2}`);
+        //IE 지원하면 백틱 안쓴다.
+        document.write(typeof(number), '<br>');
+        document.write(typeof(+number), '<br>');
+        document.write(typeof(null), '<br>'); // 심각
+        document.write(typeof(NaN), '<br>'); // 심각
+        document.write(typeof(Infinity), '<br>');
+        document.write(typeof([]), '<br>'); // 심각
+        document.write(typeof({}), '<br>');
+        document.write(typeof(''), '<br>');
+        document.write(typeof(0), '<br>');
+
+        console.log(0 + '');
+        console.log(Infinity + '');
+        console.log(true + '');
+        console.log({} + ''); // 심각
+        console.log(({}) + ''); // 심각
+        console.log([] + ''); // 심각
+        console.log([1, 2, 3, 4] + ''); // 심각
+
+        console.log(0+''); //'0'
+        console.log({}+''); //0
+        console.log(({})+'')//'[object object]'
+        //indexof는 정규표현식을 허용하지 않음
+        document.write(`txt.search("FG"):${txt.search("F")}`)
+        document.write(`txt.indexof("FG"):${txt.indexOf("F")}`)
+        document.write(`txt.search("z"):${txt.search("z")}`)
+        document.write(`txt.indexof("z"):${txt.indexOf("Z")}`)
+        //정규표현식
+        let regExp=/BCD/;
+        document.write(`${txt.search(regExp)}<br>`);
+
+        document.write(`txt.lastIndexOf: ${txt.lastIndexOf("F")} <br>`);
+
+        //A~C까지 출력
+        //slice (시작인덱스, 종료인덱스) : 시작인덱스부터 종료인덱스 -1 까지 반환
+        //subtr(시작위치, 길이) : 시작인덱스부터 길이만큼 반환
+        document.write(`txt.slice(0,3): ${txt.slice(0,3)} <br>`);
+        document.write(`txt.substring(0,3): ${txt.substring(0,3)} <br>`);
+        document.write(`txt.substr(0,3): ${txt.substr(0,3)} <br>`);
+        document.write('abcdef'.replace('cde','kahi'),'<br>');
+        document.write(`txt.replace('ABC', 'hojun') : ${txt.replace(/ABC/, 'hojun')} <br>`);
+        document.write(`txt.replace('ABC', 'hojun') : ${txt.replace(/ABC/g, 'hojun')} <br>`);
+        //g는 전역매칭을 의미
+        document.write(txt.includes('Z'), '<br>');
+        document.write(txt.includes('BC'), '<br>');
+        document.write(txt.startsWith('BCD'), '<br>');
+        document.write(txt.startsWith('ABC'), '<br>');
+        document.write(txt.endsWith('AB'), '<br>');
+        document.write(txt.endsWith('ABC'), '<br>');
+</script>
+</body>
+</html>
