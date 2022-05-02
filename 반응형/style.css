@@ -1,21 +1,18 @@
-/* reset */
-body,
-h1,
-p {
-	margin: 0;
+body, p,h1 {
+    margin:0;
+    padding:0;
 }
 
 ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+    list-style:none;
+    margin:0;
+    padding:0;
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
-/* font */
 @font-face {
 	font-family: "SpoqaHanSansNeo-Regular";
 	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff") format("woff");
@@ -30,164 +27,138 @@ a {
 	font-style: normal;
 }
 
-/* rem 단위 기준 */
 html {
 	font-size: 10px;
+    color: #121314;
 }
 
 body {
-	font-family: "SpoqaHanSansNeo-Regular";
-	font-size: 1.6rem;
-	color: #121314;
+    font-family: 'SpoqaHanSansNeo-Regular';
+    font-size: 1.6rem;
 }
-
 strong {
-	font-family: "SpoqaHanSansNeo-Bold";
+    font-family: "SpoqaHanSansNeo-Bold";
 }
 
-.txt-hide {
-	position: absolute;
-	clip: rect(0 0 0 0);
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
+.wrapper {
+    display: flex;
+    gap:5%;
+    width:120rem;
+    margin:24rem auto;
+    max-width: calc(100% - 6rem);
 }
 
-.wrap {
-	display: flex;
-	gap: 8%;
-	width: 120rem;
-	max-width: calc(100% - 6rem);
-	margin: 24rem auto;
+.txt-info h1 {
+    font-size:7rem;
+    font-weight: normal;
 }
 
-.section-text h1 {
-	font-size: 7rem;
-	font-weight: normal;
+.txt-info p {
+    margin-top:2rem;
+    font-size:2rem;
+    color: #47494D;
+    line-height: 1.5;
 }
 
-.section-text p {
-	margin-top: 2rem;
-	font-size: 2rem;
-	color: #47494d;
-	line-height: 1.5;
+.link-info {
+    flex-basis: 40%;
 }
 
-.section-field {
-	flex-basis: 40%;
-	flex-shrink: 0;
+.link-info ul {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    flex-grow: 1;
 }
 
-.section-field ul {
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-	gap: 2rem;
+.link-info ul li {
+    position: relative;
+    flex-grow: 1;
+}
+.link-info ul li a {
+    display: block;
+    width: 100%;
+    height:0;
+    padding-top: 280px;
+
+    border-radius: 2rem;
 }
 
-.section-field ul li {
-	position: relative;
-	flex-grow: 1;
+.IT-education a {
+    background:url("./images/Rectangle\ 2.png") no-repeat 50% 50% / cover;
 }
 
-.section-field ul li a {
-	display: block;
-	width: 100%;
-
-	/* 비율유지 */
-	height: 0;
-	padding-top: 58.335%;
-
-	border-radius: 2rem;
-	font-size: 3rem;
-	color: #fff;
+.IT-book a {
+    background:url("./images/Rectangle\ 3.png") no-repeat 50% 50% / cover;
 }
 
-/* 배경 */
-.field-video a {
-	background: url(images/Rectangle\ 2.png) no-repeat 50% 50% / cover;
+.link-info .field-title {
+    position: absolute;
+    top:4rem;
+    left:4rem;
+    color:white;
+    font-size: 3rem;
 }
 
-.field-book a {
-	background: url(images/Rectangle\ 3.png) no-repeat 50% 50% / cover;
-}
-
-.section-field .field-title {
-	width: calc(100% - 8rem);
-	position: absolute;
-	top: 4rem;
-	left: 4rem;
-}
-
-.section-field .field-go {
+.link-info .field-go {
 	position: absolute;
 	bottom: 4rem;
 	right: 4rem;
-	padding-right: 1.2em;
-	background: url(./img/arrow.svg) no-repeat right 50% / 1.2em;
 	font-size: 1.6rem;
+    padding-right: 18px;
+    color:#FFF;
+    background:url("./images/icon-_.png") no-repeat right;
 }
 
-/* 태블릿 */
 @media screen and (max-width: 768px) {
-	
-	.wrap {
+    .wrapper {
 		flex-direction: column;
 	}
-
-	.section-text p {
+    .txt-info p {
 		font-size: 1.8rem;
 		margin-bottom: 6rem;
 	}
 
-	.section-field ul {
-		flex-direction: row;
-	}
+    .link-info ul{
+        flex-direction: row;
+    }
 
-	.section-field ul li a {	
+    .link-info ul li a {	
 		font-size: 2.4rem;
 	}
 
-	.section-field .field-title {
+	.link-info .field-title {
 		top: 3rem;
 		left: 3rem;
 	}
 
-	.section-field .field-go {
+	.link-info .field-go {
 		bottom: 2rem;
 		right: 2rem;
 	}
 }
 
-/* 모바일 */
 @media (max-width: 500px) {
-	.wrap {
-		display: flex;
-		gap: 8%;
-		width: 120rem;
-		margin: 10rem auto 9.1rem auto;
-	}
 
-	.section-text h1 {
-		font-size: 3.6rem;
-	}
+    .txt-info h1 {
+        font-size: 3.6rem;
+    }
 
-	.section-text p {
-		margin-top: 1.4rem;
+    .txt-info p {
+        margin-top: 1.4rem;
 		margin-bottom: 4rem;
 		font-size: 1.4rem;
-	}
+    }
 
-	.section-field ul {
-		flex-direction: column;
-	}
+    .link-info ul{
+        flex-direction: column;
+    }
 
-	.section-field ul li a {
+    .link-info ul li a {	
 		font-size: 2rem;
 	}
 
-	.section-field .field-go {
+    .link-info .field-go {
 		font-size: 1.4rem;
 		font-weight: 400;
 	}
