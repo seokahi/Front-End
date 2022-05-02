@@ -1,0 +1,239 @@
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+
+body,p,input {
+    padding:0;
+    margin:0;
+}
+
+h1,h2 {
+    margin:0;
+    padding:0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+a {
+    text-decoration:none;
+}
+.wrapper {
+    width: 520px;
+    border:1px solid #C4C4C4;
+    border-radius: 10px;
+    margin:20px auto;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.header-login {
+    text-align: center;
+    border-bottom: 1px solid #C4C4C4;
+    padding:22px 24px 18px 24px;
+}
+
+
+.head-login {
+    display:inline-block;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    vertical-align: top;
+}
+
+.login-close {
+    float:right;
+    width:16px;
+    height: 16px;
+}
+.main-login {
+    padding:26px 24px 24px;
+}
+
+.main-login::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.tit-login {
+    font-family: Spoqa Han Sans Neo;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    margin-bottom:24px;
+}
+
+.idpwd-login .btn-id {
+    width: 100%;
+    border:1px solid #C4C4C4;
+    border-radius: 5px;
+    background-color: white;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding:14px 15px;
+    color: #767676;
+    margin-bottom: 10px;
+}  
+.idpwd-login .btn-pwd {
+    width: 100%;
+    border:1px solid #C4C4C4;
+    border-radius: 5px;
+    background-color: white;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding:14px 15px;
+    color: #767676;
+    margin-bottom: 16px;
+} 
+
+
+.check-login {
+    margin-right:8px;
+    vertical-align: bottom;
+}
+
+.continue-login {
+    margin-bottom:20px;
+}
+
+.btn-login {
+    display:block;
+    background-color:#2F80ED;
+    border:1px solid #2F80ED;
+    border-radius: 5px;
+    text-align: center;
+    padding:13px 0px 13px;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color:white;
+    margin-bottom: 20px;
+}
+
+.find-info {
+    margin:0 auto;
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+.find-info::after {
+    content: '';
+    display: block;
+    clear:both;
+}
+
+.join-user {
+    float: left;
+    margin-left:158px;
+    color:#767676;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+}
+
+.join-user::after {
+    content: '';
+    width: 1px;
+    height: 12px;
+    background-color:#767676 ;
+    float:right;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.find-user {
+    float:left;
+    color:#767676;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+}
+
+.or-login {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    text-align:center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    color: #767676;
+    margin-bottom:19px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap:10px;
+}
+
+.or-login::before, .or-login::after {
+    content: " ";
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    height: 1px;
+    background-color: #c4c4c4;
+}
+.google {
+    border: 1px solid #767676;
+    border-radius: 5px;
+    padding:10px 0px 10px 11px;
+    margin-bottom: 10px;
+}
+
+.google-login::before {
+    background:url("Google__G__Logo\ 1.png");
+}
+
+.facebook {
+    border: 1px solid #2D9CDB;
+    border-radius: 5px;
+    padding:10px 0px 10px 11px;
+    margin-bottom: 10px;
+}
+
+.naver {
+    border: 1px solid #00BF18;
+    border-radius: 5px;
+    padding:10px 0px 10px 11px;
+    margin-bottom: 10px;
+}
+
+.kakao {
+    border: 1px solid #F2C94C;
+    border-radius: 5px;
+    padding:10px 0px 10px 11px;
+}
+
+.img-google,.img-facebook,.img-naver,.img-kakao {
+    float:left;
+    margin-right: 123px;
+}
+
+.txt-google,.txt-facebook,.txt-naver,.txt-kakao {
+    font-family: Spoqa Han Sans Neo;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color:#767676;
+} 
+

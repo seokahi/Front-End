@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login_style.css">
+    <title></title>
+</head>
+<body>
+    <section class="wrapper">
+        <header class="header-login">
+            <h1 class="blind"> 로그인 페이지</h1>
+            <p class="head-login">로그인 또는 회원가입</p>
+            <img src="close.png" alt="" class="login-close" onclick="location.href='index.html'"> 
+        </header>
+        <main class="main-login">
+            <h2 class="tit-login">위니브에서 여러분의 궁금증을 해결하세요!</h2>
+            <div class="idpwd-login">
+                <input type="text" class="btn-id" placeholder="아이디">
+                <input type="password" class="btn-pwd" placeholder="비밀번호">
+            </div>
+            <div class="continue-login" onclick="changeimage()">
+                <img src="check-box.png" alt="" id="check-login" class="check-login">
+                <span class="txt-login">로그인 상태 유지</span>
+            </div>
+            <a href="#none" class="btn-login">로그인</a>
+            <div class="find-info">
+                <a href="#none" class="join-user">회원가입</a>
+                <a href="#nonde" class="find-user">아이디/비밀번호 찾기</a>
+            </div>
+            <p class="or-login">또는</p>
+            <div class="google">
+                <a href="#none" class="google-login">
+                    <!-- <img src="Google__G__Logo 1.png" alt="" class="img-google"> -->
+                    <span class="txt-google">구글 계정으로 로그인</span>
+                </a>
+            </div>
+            <div class="facebook">
+                <a href="#none" class="facebook-login">
+                    <!-- <img src="facebook.png" alt="" class="img-facebook"> -->
+                    <span class="txt-google">페이스북계정으로 로그인</span>
+                </a>
+            </div>
+            <div class="naver">
+                <a href="#none" class="naver-login">
+                    <!-- <img src="naver-logo.png" alt="" class="img-naver"> -->
+                    <span class="txt-naver">네이버 계정으로 로그인</span>
+                </a>
+            </div>
+            <div class="kakao">
+                <a href="#none" class="kakao-login">
+                    <!-- <img src="message-circle.png" alt="" class="img-kakao"> -->
+                    <span class="txt-kakao">카카오톡 계정으로 로그인</span>
+                </a>
+            </div>
+        </main>
+    </section>
+    <script type="text/javascript">
+        
+        const state=1;
+        function changeimage(){
+            if (state==0){
+                state=1;
+                document.getElementById("check-login").src="check-box.png";
+            }
+            else{
+                state=0;
+                document.getElementById("check-login").src="check-box-blue.png";
+            }
+        }
+
+        // function IDcheck {
+        //     var id= document.getElementById("id");
+        //     if ((id.value)==""){
+        //     id.style.border = "2px solid #F4492E";
+        //     return false;
+        // }
+        //}
+    
+    </script>
+</body>
+</html>
