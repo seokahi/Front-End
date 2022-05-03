@@ -1,0 +1,36 @@
+<!-- var fish = ['정어리', '고등어', '돌고래', '참치', '고래상어', '코끼리'];
+        // 1. splice 를 이용해 코끼리를 제거해보세요
+        // 2. 참치 다음에 다금바리를 추가해보세요
+        // 3. 돌고래를 제거하고 옥돔과 갈치를 추가해보세요 -->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>hello javascript</title>
+    </head>
+    <body>
+        <script>
+            function splice_remove(fish) {
+                fish.splice(-1,1);
+            }
+
+            function splice_add(fish) {
+                fish.splice(4,0,"다금바리");
+            }
+
+            function splice_insert(fish) {
+                fish.splice(2,1,"옥돔","갈치");
+            }
+
+            let fish = ['정어리', '고등어', '돌고래', '참치', '고래상어', '코끼리'];
+            splice_remove(fish);
+            console.log(fish);
+            splice_add(fish);
+            console.log(fish);
+            splice_insert(fish);
+            console.log(fish);
+        </script>
+    </body>
+</html>

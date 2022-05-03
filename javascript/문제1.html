@@ -1,0 +1,28 @@
+<!-- 철수가 심부름을 받았습니다! 어머니께서 마늘, 양파, 배추를 사오라고 하는군요. 집에 왔더니 오늘 필요한 재료는 배추라고 합니다! 어머니에게 배추를 주세요! -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello javascript</title>
+</head>
+<body>
+    <script>
+        function buy_list(a,b,c) {
+            let new_buy=[];
+            new_buy.push(a);
+            new_buy.push(b);
+            new_buy.push(c);
+            return new_buy;
+        }
+
+        function today_eat_list(list) {
+            return list.pop();
+        }
+        let minsu_buy=buy_list("마늘","양파","배추");
+        let today_eat=today_eat_list(minsu_buy);
+        console.log(`엄마 ${today_eat} 여기`);
+    </script>
+</body>
+</html>
