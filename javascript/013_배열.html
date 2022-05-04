@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 정리</title>
+</head>
+<body>
+    <script>
+        // 1. unshift => 맨 앞에 요소 추가
+        let cafe = ['coffee', 'cake', 'tea', 'cookie']
+        const count = cafe.unshift('bread');
+        console.log(cafe);
+        //2. shift => 요소 제거 
+        let cafe2 = ['coffee', 'cake', 'tea', 'cookie']
+        const firstElement = cafe2.shift();
+        console.log(cafe2);
+        //3. splice => 두 번째 인덱스에는 개수가 들어가는거 기억하기
+        const cafe3 = ['coffee', 'cake', 'tea', 'cookie']
+        console.log(cafe3.splice(1,3, 'bread'));
+        console.log(cafe3);
+        //4. slice => 원본 변경 x 새로운 배열을 반환, 두번째 인덱스 전까지.
+        const cafe4 = ['coffee', 'cake', 'tea', 'cookie']
+        console.log(cafe4.slice(-2,-1));
+        //5. indexOf() => 요소의 인덱스 찾고싶을 때 , 없으면 -1
+        const cafe5 = ['bread', 'coffee', 'cake', 'tea', 'cookie']
+        console.log(cafe5.indexOf('cookie'))
+        console.log(cafe5.indexOf('cook'))
+        //6. isArray() => 배열인지
+        console.log(Array.isArray(cafe5));
+        //7. join() => 요소들 연결해 하나의 값으로 만듦.
+        console.log(cafe5.join());
+        console.log(cafe.join('!!!'))
+        let number = ['010', '5044', '2903']
+        console.log(number.join('-'))
+        //8. fill() 똑같은 요소로 채우고 싶을 때
+        cafe5.fill('bread')
+        console.log(cafe5);
+        cafe6 = ['coffee', 'cake', 'tea', 'cookie']
+        //'bread'를 채우기 시작할 시점의 인데스
+        console.log(cafe6.fill('bread', -1));
+        console.log(Array(10).fill(10))
+        console.log(Array(10).fill(0))
+        let test2 = Array(10).fill(0)
+        console.log(test2.fill('hello', -1))
+        console.log(test2.fill('hello', -2))
+        console.log( test2.fill('hello', -3))
+        test2 = Array(10).fill(0)
+        //'bread'를 어디까지 입력할지 종료시점
+        cafe5.fill('bread', -3, -1)
+        console.log(test2.fill('bread', -3, -1))
+        test3 = Array(10).fill(0)
+        console.log(test3.fill('bread', 2, 5))
+        //9. flat() => 원하는 깊이로 평탄화
+        let arr = [[1, 2, 3], [4, 5, 6], [7, 8, [9, [10, 11]]]]
+        console.log(arr.flat());
+        //(9) [1, 2, 3, 4, 5, 6, 7, 8, Array(2)]
+        console.log(arr.flat(2));
+        //(10) [1, 2, 3, 4, 5, 6, 7, 8, 9, Array(2)]
+        console.log(arr.flat(3));
+        // 11. includes() => 특정 요소가 포함되었는지 확인
+        cafe6 = ['coffee', 'cake', 'tea', 'cookie']
+        console.log(cafe6.includes('bread'));
+        console.log(cafe.includes('cake'));
+        // 12. find() => 조건 만족하는지
+        arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log(arr.find(i => i>5));
+
+        // 13. filter() => 모든 요소가 조건 만족하는가?
+        arr = [{
+            'name' : 'title1',
+            'contents' : 'contents1',
+            'dataNum' : 1
+        }, {
+            'name' : 'title2',
+            'contents' : 'contents2',
+            'dataNum' : 2
+        }, {
+            'name' : 'title3',
+            'contents' : 'contents3',
+            'dataNum' : 3
+        }, {
+            'name' : 'title4',
+            'contents' : 'contents4',
+            'dataNum' : 4
+        }, {
+            'name' : 'title5',
+            'contents' : 'contents5',
+            'dataNum' : 5
+        }];
+        // 여기서 i는 배열 안에거를 하나씩
+        console.log(arr.filter(i => i.contents == 'contents3'));
+        console.log(arr.filter(i => i.dataNum > 3));
+        console.log(arr.filter(i => i.name.includes('title')));
+        arr = [{
+            'name' : '안녕1',
+            'contents' : 'contents1',
+            'dataNum' : 1
+        }, {
+            'name' : '안녕2',
+            'contents' : 'contents2',
+            'dataNum' : 2
+        }, {
+            'name' : 'title3',
+            'contents' : 'contents3',
+            'dataNum' : 3
+        }, {
+            'name' : 'title4',
+            'contents' : 'contents4',
+            'dataNum' : 4
+        }, {
+            'name' : 'title5',
+            'contents' : 'contents5',
+            'dataNum' : 5
+        }];
+        console.log(arr.filter(i => i.name.includes('tit')));
+        console.log(arr.filter(i => i.name.includes('안녕')));
+        arr = [{
+            'name' : '안녕1',
+            'contents' : '프론트엔드1',
+            'dataNum' : 1
+        }, {
+            'name' : '프론트엔드2',
+            'contents' : 'content2',
+            'dataNum' : 2
+        }, {
+            'name' : 'title3',
+            'contents' : '프론트엔드3',
+            'dataNum' : 3
+        }, {
+            'name' : '안녕4',
+            'contents' : 'contents4',
+            'dataNum' : 4
+        }, {
+            'name' : 'title5',
+            'contents' : 'contents5',
+            'dataNum' : 5
+        }];
+        console.log(arr.filter(i => i.name.includes('프론트')));
+        console.log(arr.filter(i => i.contents.includes('프론트')));
+        // 14. FINDiNNDEX() => 조건 만족하는 첫 번째 인덱스
+        let cafe7 = ['coffee', 'cake', 'tea', 'cookie'];
+        index = cafe7.findIndex(obj => console.log(obj));
+        cafe = [{
+            'item' : 'coffee',
+            'amount' : 5
+        }, {
+            'item' : 'cake',
+            'amount' : 4
+        }, {
+            'item' : 'tea',
+            'amount' : 7
+        }, {
+            'item' : 'cookie',
+            'amount' : 3
+        }];
+
+        index = cafe.findIndex(obj => obj.item.length <= 3)
+        cafe2 = [{
+            'item' : 'coffee',
+            'amount' : 5
+        }, {
+            'item' : 'cake',
+            'amount' : 4
+        }, {
+            'item' : 'tea',
+            'amount' : 7
+        }, {
+            'item' : 'cookie',
+            'amount' : 3
+        }];
+
+        index = cafe2.findIndex(obj => obj.item.length <= 3)
+        index
+        2
+
+        cafe3 = [{
+            'item' : 'coffee',
+            'amount' : 5
+        }, {
+            'item' : 'cake',
+            'amount' : 4
+        }, {
+            'item' : 'tea',
+            'amount' : 7
+        }, {
+            'item' : 'cookie',
+            'amount' : 3
+        }, {
+            'item' : 'x',
+            'amount' : 300
+        }];
+
+        cafe2.findIndex(obj => obj.item.length <= 3)
+        2
+        arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+        arr.find(i => i > 50);
+        60
+        cafe3 = [{
+            'item' : 'coffee',
+            'amount' : 5
+        }, {
+            'item' : 'cake',
+            'amount' : 4
+        }, {
+            'item' : 'tea',
+            'amount' : 7
+        }, {
+            'item' : 'cookie',
+            'amount' : 3
+        }, {
+            'item' : 'x',
+            'amount' : 300
+        }];
+
+        cafe3.findIndex(obj => obj.item.length <= 3)
+        cafe4 = [{
+            'item' : 'coffee',
+            'amount' : 5
+        }, {
+            'item' : 'cake',
+            'amount' : 4
+        }, {
+            'item' : 'tea',
+            'amount' : 7
+        }, {
+            'item' : 'cookie',
+            'amount' : 3
+        }, {
+            'item' : 'x',
+            'amount' : 300
+        }];
+
+        cafe4.findIndex(obj => obj.item.length <= 3)
+        2
+        arr = [{
+            'name' : 'title1',
+            'contents' : 'contents1',
+            'dataNum' : 1,
+            'data' : [1, 2, 3]
+        }, {
+            'name' : 'title2',
+            'contents' : 'contents2',
+            'dataNum' : 2,
+            'data' : [1, 2, 3]
+        }, {
+            'name' : 'title3',
+            'contents' : 'contents3',
+            'dataNum' : 3,
+            'data' : [1, 2, 100]
+        }, {
+            'name' : 'title4',
+            'contents' : 'contents4',
+            'dataNum' : 4,
+            'data' : [1, 2, 3]
+        }, {
+            'name' : 'title5',
+            'contents' : 'contents5',
+            'dataNum' : 5,
+            'data' : [1, 2, 100]
+        }];
+        //(5) [{…}, {…}, {…}, {…}, {…}]
+    </script>
+</body>
+</html>
