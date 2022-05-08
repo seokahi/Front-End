@@ -63,7 +63,7 @@
         cafe6 = ['coffee', 'cake', 'tea', 'cookie']
         console.log(cafe6.includes('bread'));
         console.log(cafe.includes('cake'));
-        // 12. find() => 조건 만족하는지
+        // 12. find() => 조건 만족하는거 첫번째
         arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         console.log(arr.find(i => i>5));
 
@@ -141,8 +141,9 @@
         console.log(arr.filter(i => i.contents.includes('프론트')));
         // 14. FINDiNNDEX() => 조건 만족하는 첫 번째 인덱스
         let cafe7 = ['coffee', 'cake', 'tea', 'cookie'];
-        index = cafe7.findIndex(obj => console.log(obj));
-        cafe = [{
+        index = cafe7.findIndex(obj => obj.length<=3);
+        console.log(index);
+        let cafe8 = [{
             'item' : 'coffee',
             'amount' : 5
         }, {
@@ -156,8 +157,9 @@
             'amount' : 3
         }];
 
-        index = cafe.findIndex(obj => obj.item.length <= 3)
-        cafe2 = [{
+        index = cafe8.findIndex(obj => obj.item.length <= 3);
+        console.log(index);
+        let cafe9 = [{
             'item' : 'coffee',
             'amount' : 5
         }, {
@@ -171,8 +173,9 @@
             'amount' : 3
         }];
 
-        index = cafe2.findIndex(obj => obj.item.length <= 3)
-        cafe3 = [{
+        index = cafe9.findIndex(obj => obj.item.length <= 3);
+        console.log(index);
+        let cafe10 = [{
             'item' : 'coffee',
             'amount' : 5
         }, {
@@ -189,13 +192,12 @@
             'amount' : 300
         }];
 
-        cafe2.findIndex(obj => obj.item.length <= 3)
-        2
+        index = cafe10.findIndex(obj => obj.item.length <= 3);
+        console.log(index);
+        // find랑 findindex 차이
         arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
-
-        arr.find(i => i > 50);
-        60
-        cafe3 = [{
+        console.log(arr.find(i => i > 50));
+        let cafe11 = [{
             'item' : 'coffee',
             'amount' : 5
         }, {
@@ -212,8 +214,8 @@
             'amount' : 300
         }];
 
-        cafe3.findIndex(obj => obj.item.length <= 3)
-        cafe4 = [{
+        console.log(cafe11.findIndex(obj => obj.item.length <= 3));
+        let cafe12 = [{
             'item' : 'coffee',
             'amount' : 5
         }, {
@@ -230,8 +232,8 @@
             'amount' : 300
         }];
 
-        cafe4.findIndex(obj => obj.item.length <= 3)
-        2
+        console.log(cafe12.findIndex(obj => obj.item.length <= 3));
+        //  15. map() => 주어진 함수를 호출한 결과를 모아 새로운 배열로 반환
         arr = [{
             'name' : 'title1',
             'contents' : 'contents1',
@@ -258,7 +260,62 @@
             'dataNum' : 5,
             'data' : [1, 2, 100]
         }];
-        //(5) [{…}, {…}, {…}, {…}, {…}]
+        console.log(arr.map(i => i.name));
+        console.log(arr.map(i => i.contents));
+        console.log(arr.map(i => i.dataNum));
+        console.log(arr.map(i => i.data));
+        console.log(arr.map(i => i.data[2]));
+        arr1 = [{
+            'name' : 'title1',
+            'contents' : 'contents1',
+            'dataNum' : 1,
+            '지역과날짜' : [
+                '한국',
+                [22, 5, 4]
+            ]
+        }, {
+            'name' : 'title2',
+            'contents' : 'contents2',
+            'dataNum' : 2,
+            '지역과날짜' : [
+                '한국',
+                [22, 5, 4]
+            ]
+        }, {
+            'name' : 'title3',
+            'contents' : 'contents3',
+            'dataNum' : 3,
+            '지역과날짜' : [
+                '한국',
+                [23, 5, 4]
+            ]
+        }, {
+            'name' : 'title4',
+            'contents' : 'contents4',
+            'dataNum' : 4,
+            '지역과날짜' : [
+                '한국',
+                [23, 5, 4]
+            ]
+        }, {
+            'name' : 'title5',
+            'contents' : 'contents5',
+            'dataNum' : 5,
+            '지역과날짜' : [
+                '한국',
+                [22, 5, 4]
+            ]
+        }];
+        console.log(arr1.map(i => i['지역과날짜'][1][0]));
+        arr = [1, 2, 4, 8, 16]
+        ////   복구   ////
+        console.log(arr.map(i => i + 10));
+
+        function weniv(x){
+            return x + 100
+        }
+
+        console.log(arr1.map((value, index, array) => ([index, value.contents, array])));
     </script>
 </body>
 </html>
