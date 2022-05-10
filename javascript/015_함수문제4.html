@@ -1,0 +1,38 @@
+<!--  숫자 단위 콤마를 찍는 함수를 만들어주세요.---->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수문제4
+    </title>
+</head>
+<body>
+    <script>
+        // 코드 효율성 생각해봐야할 듯,,
+        function comma(number) {
+            let str_number=String(number);
+            if(str_number.length <=3) {
+                console.log(str_number);
+            }
+            else {
+                for(let j =str_number.length ; j>=0;j-=3) {
+                    if(j - 3<= 0){
+                        break;
+                    }
+                    else {
+                        str_number = str_number.substr(0,j-3)+','+str_number.substr(j-3)
+                    }
+                }
+            }
+            console.log(str_number);
+        }
+        comma(1000);
+        comma(100000000);
+        comma(100000000000);
+        comma(123456789);
+    </script>
+    
+</body>
+</html>

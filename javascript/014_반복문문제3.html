@@ -1,0 +1,33 @@
+<!--  [11,22,33,111,2] 의 각 자리 수를 합해라 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        // 내풀이
+        // let a=[11,22,33,111,2];
+        // a=a.join('');
+        // let sum = 0;
+        // for(let i=0;i<a.length;i++){
+        //     console.log(a[i]);
+        //     sum += +a[i];
+        // }
+        // console.log(sum);
+        // 다른 풀이
+        let a=[11,22,33,111,2];
+        let sum = 0;
+        for(let i of a) {
+            let s = ''+i;
+            for (let j  of s.split('')) {
+                sum += +j;
+            }
+        }   
+        
+    </script>
+</body>
+</html>
