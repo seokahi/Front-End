@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉트박스</title>
+    <style>
+        /*reset.css*/
+        body,h2,p {
+            padding:0;
+            margin:0;
+        }
+        ul {
+            list-style: none;
+            padding:0;
+            margin:0;
+        }
+
+        /*ir 기법*/
+        .txt-hide {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        .container {
+            margin: 10% auto;
+            text-align:center;
+        }
+
+        .btn-lang {
+            width:200px;
+            height:40px;
+            border: 1px solid #C4C4C4;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .type-lang {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <article class="container">
+        <h2 class="txt-hide">셀렉트박스</h2>
+        <button class="btn-lang">최애 프로그래밍 언어</button>
+        <ul class="type-lang">
+            <li class="list python">Python</li>
+            <li class="list java">Java</li>
+            <li class="list javascript">JavaScript</li>
+            <li class="list Cs">C#</li>
+            <li class="list C">C/C++</li>
+        </ul>
+    </article>
+    <script>
+        const langBtn = document.querySelector('.btn-lang');
+        const listBtn = document.querySelector('.type-lang');
+        const list_python = document.querySelector('.python');
+        const list_java = document.querySelector('.java');
+        const list_javascript = document.querySelector('.javascript');
+        const list_CS = document.querySelector('.Cs');
+        const list_C = document.querySelector('.C');
+        langBtn.addEventListener('click', () => {
+            if(listBtn.style.display == 'block'){
+                listBtn.style.display = 'none';
+            }
+            else {
+                listBtn.style.display = 'block';
+            }
+        })
+        listBtn.addEventListener('click', function (event) {
+            langBtn.textContent = event.target.textContent;
+        })      
+    </script>
+</body>
+</html>
