@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <style>
+        .box {
+            width:300px;
+            height:200px;
+            background-color: black;
+        }
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        button {
+            margin:20px;
+            border-radius: 1px solid black;
+            background: pink;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button class="redbtn">red</button>
+    <button class="greenbtn">green</button>
+    <button class="yellowbtn">yellow</button>
+    <script>
+        //queryselector는 비용이 많이 들어가는 함수이니 앞에 쫘르르 탐지해서 담아주고 그걸 사용하는게 나음.!
+        const Mybtn = document.querySelector(".box");
+        const RedBtn = document.querySelector(".redbtn");
+        const GreenBtn = document.querySelector(".greenbtn");
+        const YellowBtn = document.querySelector(".yellowbtn");
+        // RedBtn.addEventListener('click', function(){
+        //     Mybtn.classList.add("red");
+        //     Mybtn.classList.remove("yellow","green");
+        // })
+        // GreenBtn.addEventListener('click', function(){
+        //     Mybtn.classList.add("green");
+        //     Mybtn.classList.remove("red","yellow");
+        // })
+        // YellowBtn.addEventListener('click', function(){
+        //     Mybtn.classList.add("yellow");
+        //     Mybtn.classList.remove("red","green");
+        // })
+        // 다른 풀이
+        const btnarr=[RedBtn,GreenBtn,YellowBtn];
+        btnarr.forEach(element => {
+            element.addEventListener('click',() => {
+                Mybtn.classList.remove('red','green','yellow');
+                if(element.className == 'redbtn') {
+                    Mybtn.classList.add("red");
+                }
+                else if(element.className == 'greenbtn') {
+                    Mybtn.classList.add("green");
+                }
+                else {
+                    Mybtn.classList.add("yellow");
+                }
+            })
+        });
+    </script>
+</body>
+</html>
