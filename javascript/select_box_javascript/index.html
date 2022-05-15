@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>셀렉트박스</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700;800&family=Roboto&display=swap');
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
         /*reset.css*/
-        body,h2,p {
+        body,h2,p,button {
             padding:0;
             margin:0;
         }
@@ -34,12 +38,30 @@
 
         .btn-lang {
             width:100%;
-            height:40px;
             border: 1px solid #C4C4C4;
             border-radius: 10px;
             box-sizing: border-box;
             background-color: white;
+            padding:12px 13px;
         }
+        .btn-lang span {
+            font-family: 'Roboto';
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0em;
+            margin-right:25px;
+        }
+/* 
+        의문 ? padding 어케 주지
+        .btn-lang::after {
+            content:'';
+            background-image: url("./icon-Triangle-down.png");
+            background-repeat: no-repeat;
+            height: 10px;
+            width: 10px;  
+            display:inline-block;
+        } */
 
         .type-lang {
             display: none;
@@ -48,15 +70,15 @@
             box-sizing: border-box;
             margin-top:9px;
             border-radius:10px;
-            padding:4px 0;
         }
 
         .list {
-            margin:12px 18px;
+            margin:5px 8px;
             padding:7px 10px;
         }
         .list:hover {
             background-color:  #F8E4FF;
+            border-radius:10px;
         }
 
         .border {
@@ -68,7 +90,10 @@
 <body>
     <article class="container">
         <h2 class="txt-hide">셀렉트박스</h2>
-        <button class="btn-lang">최애 프로그래밍 언어</button>
+        <button class="btn-lang">
+            <span>최애 프로그래밍 언어</span>
+            <img src="./icon-Triangle-down.png" alt="">
+        </button>
         <ul class="type-lang">
             <li class="list python">Python</li>
             <li class="list java">Java</li>
@@ -97,7 +122,24 @@
             }
         })
         listBtn.addEventListener('click', function (event) {
-            langBtn.textContent = event.target.textContent;
+            if( event.target.textContent == 'Python') {
+                langBtn.textContent = 'Python';
+            }
+            else if( event.target.textContent == 'Java') {
+                langBtn.textContent = 'Java';
+            }
+            else if( event.target.textContent == 'JavaScript') {
+                langBtn.textContent = 'JavaScript';
+            }
+            else if( event.target.textContent == 'C#') {
+                langBtn.textContent = 'C#';
+            }
+            else if( event.target.textContent == 'C/C++') {
+                langBtn.textContent = 'C/C++';
+            }
+            else {
+                langBtn.textContent = '최애 프로그래밍 언어';
+            }
         })      
     </script>
 </body>
