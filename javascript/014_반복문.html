@@ -512,29 +512,23 @@
         result += i;
         i+=2;
     }
-    console.log(i);
     console.log(result);
     i = 1;
     result = 0;
-    while(i < 101){
-        console.log(i);
+    while(i*2 < 101){
         result += i*2;
         i++;
     }
-    console.log(i);
     console.log(result);
     i = 0
     sum = 0
     while((i+=2)<101){
         sum += i
-        console.log(i);
-        console.log(sum);
     }
-    console.log(i);
     console.log(result);
+
     sum = 0;
     i = 100;
-
     do {
         console.log('hello world')
         i++;
@@ -557,6 +551,7 @@
         i++;
         console.log(i, 'start')
         if (i > 10) {
+            // 밑에껄 건너뜀.
             continue
         }
         console.log(i, 'end')  
@@ -566,7 +561,9 @@
     i = 2;
     j = 1;
     while(i < 10){
+        console.log('i는',i);
         i++;
+        //이미 j에서 빠져나가기 때문에 3단만 출력.
         while(j < 10) {
             console.log(`${i} X ${j} = ${i*j}`)
             j++;
