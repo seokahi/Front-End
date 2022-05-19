@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드조작
+    </title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color:bisque;
+            margin:0 auto;
+            /* transition:0.3s; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        const putBox = document.querySelector('.box');
+        let pos= 0;
+        let keys= {};
+        function move() {
+            keys[event.key] = true;
+        }
+        function stop() {
+            keys[event.key] = false;
+        }
+
+        document.addEventListener('keydown', move);
+        document.addEventListener('keyup' , stop);
+        function play() {
+            if(keys.ArrowRight) {
+                console.log("right pushed");
+                pos += 5;
+                putBox.style.transform = `translateX(${pos}px)`;
+            }
+            else if(keys.ArrowLeft) {
+                console.log("left pushed");
+                pos -= 5;
+                putBox.style.transform = `translateX(${pos}px)`;
+            }
+
+            window.requestAnimationFrame(play);
+        }
+        window.requestAnimationFrame(play);
+        // window.addEventListener("keydown", event=> {
+        //     if(event.key === 'ArrowRight') {
+        //         pos += 5;
+        //         putBox.style.transform = `translateX(${pos}px)`;
+        //     }
+        //     else if(event.key === 'ArrowLeft') {
+        //         pos -= 5;
+        //         putBox.style.transform = `translateX(${pos}px)`;
+        //     }
+        // })
+        // 좀 더 스무스하게 만들어보자구,
+
+    </script>
+</body>
+</html>

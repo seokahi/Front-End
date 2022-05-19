@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+<body>
+    <script>
+        // const me = {
+        //     name : '서가희',
+        //     address : '경기도 고양시 일산서구',
+        //     phoneNum : '010-5833-3159',
+        //     hello : function(){
+        //         console.log('안녕하세요 저는 서가희입니다.');
+        //     },
+        //     myKnowledge : function(knowlege){
+        //         knowlege.levelUp();
+        //     }
+        // }
+
+        // const knowlege = {
+        //     level: 1,
+        //     levelUp : function(){
+        //         this.level++;
+        //     }
+        // }
+
+        // me.myKnowledge(knowlege);
+        // console.log(knowlege.level);
+        
+        // function NewFactory(name){
+        //     this.name = name;
+        //     this.sayYourName = function(){
+        //         console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        //     }
+        // }
+        // let robot1 = new NewFactory('브랜든');
+        // function giveFood(foodarr){
+        //     const rand = Math.floor(Math.random()*foodarr.length);
+        //     console.log(rand);
+        //     this.food= foodarr[rand];
+        //     this.sayRandomFood = function(){
+        //         console.log(`오늘은  ${this.food}로 정했다.`);
+        //     }
+        // }
+        // let arr= ["피자","햄버거","보쌈","회"];
+        // let whatisFood = new giveFood(arr);
+        // function giveFood(){
+        //     this.sayRandomFood = function(arr){
+        //         const rand = Math.floor(Math.random()*arr.length);
+        //         console.log(rand);
+        //         this.food= arr[rand];
+        //         console.log(`오늘은  ${this.food}로 정했다.`);
+        //     }
+        // }
+        // // let arr= ["피자","햄버거","보쌈","회"];
+        // let whatisFood = new giveFood();
+        
+        function NewFactory2(name){
+            this.name = name;
+        }
+        // 메소드를 저장할 공간 => prototype
+        // NewFactory2.prototype.sayYourName = function(){
+        //     console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        // }
+
+
+        // const newbot1 =new NewFactory2("가희");
+        // const newbot2 =new NewFactory2("하하");
+//     function giveFood(foodarr){
+//         const rand = Math.floor(Math.random()*foodarr.length);
+//         console.log(rand);
+//         this.food= foodarr[rand];
+//         this.sayRandomFood = function(){
+//             console.log(`오늘은  ${this.food}로 정했다.`);
+//         }
+//     }
+//     giveFood.prototype.sayRandomFood = function(){
+//             console.log(`오늘은  ${this.food}로 정했다.`);
+//     }
+
+
+        // function Me(name,address,phoneNum) {
+        //     //이 this는 인스턴스
+        //     this.name=name;
+        //     this.address=address;
+        //     this.phoneNum=phoneNum; 
+        // }
+
+        // Me.prototype.hello = function(){
+        //         console.log('안녕하세요 저는 서가희입니다.');
+        // }
+        // Me.prototype.myKnowledge =  function(knowlege){
+        //         knowlege.levelUp();
+        // }
+
+        // function Strudent(level) {
+        //     this.level = level;
+
+        // }
+
+        // Strudent.prototype.levelUp = function() {
+        //     this.level++;
+        // }
+
+        //call :this 값을 주입해서 함수를 빌려서 쓴다...!
+        // Child.prototype = Object.create(Parent.prototype); 연결을 하는 것
+        function parent() {
+            this.name = "가희";
+
+        }
+
+        parent.prototype.rename = function(name) {
+            this.name=name;
+        }
+
+        parent.prototype.sayname = function() {
+            console.log(this.name);
+        }
+
+        function child() {
+            parent.call(this);
+        }
+
+        child.prototype = Object.create(parent.prototype);
+
+        //new 는 return 없어도 반환. 인스턴스 생성
+        //생성자함수 안의 this를 인스턴스로 바라보게 만듬.
+</script>
+
+</body>
+</html>

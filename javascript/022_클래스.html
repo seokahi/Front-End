@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+    <script>
+        class Me {
+            constructor(name, address, phoneNum) {
+                this.name = name;
+                this.address = address;
+                this.phoneNum = phoneNum;
+            }
+
+            canWalk = function () {
+                console.log('재현이가 걷는다.');
+            }
+
+            teaching = function (student) {
+                student.levelUp();
+            }
+        }
+
+        class Student {
+            constructor(level) {
+                this.level = level;
+            }
+            levelUp = function () {
+                this.level++;
+            }
+        }
+
+        const me = new Me('재현', '010-0101-0101', '제주도');
+        const student = new Student(1);
+
+        //상속 때 constructor 안쓰면 자동으로 부모꺼가 옴
+        
+        class 소시지 {
+            constructor(taste1,el) {
+                this.taste1 = taste1;
+                this.taste2 - el;
+            }
+
+            taste = function() {
+                console.log(`${this.taste1}와 ${this.taste2}맛이 난다!`);
+            }
+        }
+
+        class 소시지확장 extends 소시지 {
+            constructor() {
+                super();
+
+            }
+            tasteSossage= function() {
+                console.log(`${this.taste1}와 ${this.taste2}맛이 난다!`);
+                console.log(`불맛이나여`);
+            }
+            }
+        
+
+            let tastes = new 소시지("파","아아");
+            let tastess = new 소시지확장();
+    </script>
+</html>

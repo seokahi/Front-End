@@ -1,0 +1,44 @@
+<!-- 스코프 : 변수의 생성범위 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tmzhvm</title>
+</head>
+<body>
+    <script>
+        // var func1 = function () {
+        //     var a=1;
+        //     var b=2;
+        //     // 안에 찾는게 없으면 밖을 찾아나감 -> 스코프 체인
+        //     //스코프 체인: 안에 없으면 밖에 찾기, 상위 요소로 찾아 찾아 올라가기
+        //     // console.log(a+b); //3
+        //     var func2 = function () {
+        //         var b=5;
+        //         var c=6;
+        //         a=a+b+c;
+        //         console.log(a);//12
+        //     }
+        //     func2();
+        // }
+
+        // var a= 20;
+        // func1();
+
+        function test() {
+            var val1 = "hello";
+            var val2 = "world";
+
+            
+        }
+        // var let const를 안쓰면 전역변수처럼 써짐.
+        
+        test();
+        console.log(val1);
+        console.log(val2);
+    </script>
+
+</body>
+</html>
