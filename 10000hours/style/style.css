@@ -1,0 +1,21 @@
+.txt-hide {
+    position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+
+body {
+    background: #5B2386;
+}
+
+.container{
+    text-align: center;
+    margin:120px auto;
+}
+
+.img-logo {
+    background:url(../image/시계.png) no-repeat center center;
+}
