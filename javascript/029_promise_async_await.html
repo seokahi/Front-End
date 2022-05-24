@@ -273,6 +273,26 @@
 
         // why? await은 promise 앞에서만 사용
         // await [[Promise 객체]] 의 형식
+        // 프라미스 체이닝이 아닌 경우
+        //동기임
+        p = new promise(function(resolve, reject) {
+            setTimeout(() => resolve(10), 1000);
+        });
+
+        p.then(result => {
+            console.log(result);
+            return result ** 2;
+        });
+
+        p.then(result => {
+            console.log(result);
+            return result ** 2;
+        });
+
+        p.then(result => {
+            console.log(result);
+            return result ** 2;
+        });
     </script>
 </body>
 </html>

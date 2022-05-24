@@ -11,11 +11,19 @@ body {
     background: #5B2386;
 }
 
+.header {
+    text-align: center;
+    margin-top:120px;
+}
 .container{
     text-align: center;
-    margin:120px auto;
 }
 
-.img-logo {
+/* 이미지에는 가상요소를 쓸 수 없음.*/
+h1::before {
+    content:'';
+    display:block;
+    width:233px;
+    height: 235px;
     background:url(../image/시계.png) no-repeat center center;
 }
