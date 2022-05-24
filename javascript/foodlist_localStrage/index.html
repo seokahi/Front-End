@@ -24,6 +24,7 @@
         }
 
         .div {
+            position:relative;
             height:calc(100% - 20px);
             background-color: white;
             border-radius:20px;
@@ -58,12 +59,24 @@
             font-weight:bold;
         }
 
-        .list-food h2 {
-            margin-bottom: 30px;
+        .txt-eat {
+            margin: 30px;
         }
         .list-food li {
             text-align: left;
             font-weight: bold;
+        }
+
+        .btn-rem{
+            position: absolute;
+            bottom:20px;
+            right:20px;
+            width:100px;
+            height: 40px;
+            padding:10px;
+            background-color: rgb(114, 214, 114);
+            border-radius: 10px;
+            color:white;
         }
     </style>
 </head>
@@ -76,9 +89,10 @@
                 <input type="text" placeholder="오늘 무엇을 먹었나요?" id="list" class="inp-list">
                 <button type="button"  onclick="getValueInput()" class="btn-inp">입력</button>
             </div>
+            <h2 class="txt-eat">오늘 먹은 음식</h2>
             <ul class="list-food">
-                <h2>오늘 먹은 음식</h2>
             </ul>
+            <button type="button"  onclick="ValueRemove()" class="btn-rem">Clear</button>
         </div>
     </section>
     <script>
@@ -100,6 +114,16 @@
                 liTxt.innerText =localStorage.getItem(i);
                 today_food.appendChild(liTxt);
             }
+        }
+
+        function ValueRemove() {
+            localStorage.clear();
+            const too = container.getElementsByTagName("li");
+            while ( today_food.hasChildNodes() )
+            {
+                today_food.removeChild( today_food.firstChild );       
+            }
+
         }
     </script>
 </body>
