@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input id="one" type="text">
+    <input id="two" type="text">
+    <p id="three"></p>
+    <button id="four">클릭해!</button>
+
+    <script>
+        $("#four").click(function () {
+            let value = $("#one").val();
+            $("#one").val('');
+            $("#two").val(value);
+            $("#three").text(value);
+        });
+//         $표시 이유
+// 1. 제이쿼리 아닌 경우: DOM트리 안에 요소 나타낼때
+// 2. 제이쿼리인 경우: 제이쿼리로 셀렉한걸 나타내기 위해
+    </script>
+</body>
+</html>

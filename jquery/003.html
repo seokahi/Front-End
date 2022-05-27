@@ -9,17 +9,22 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <input id="one" type="text">
+    <!-- <input id="one" type="text">
     <input id="two" type="text">
     <p id="three"></p>
-    <button id="four">클릭해!</button>
+    <button id="four">클릭해!</button> -->
+    <input name="man-news">
+    <input name="milkman">
+    <input name="letterman2">
+    <input name="newmilk">
     <script>
-        $("#four").click(function () {
-            let value = $("#one").val();
-            $("#one").val('');
-            $("#two").val(value);
-            $("#three").text(value);
-        });
+        // $("#four").click(function () {
+        //     let value = $("#one").val();
+        //     $("#one").val('');
+        //     $("#two").val(value);
+        //     $("#three").text(value);
+        // });
+        $("input[name*='man']").val("has man in it!");
     </script>
 </body>
 </html>
