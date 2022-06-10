@@ -5,12 +5,11 @@ import Login from './pages/login/Login'
 function App() {
   const user = {
     login: true,
-    id:"서가희",
-    nickname:"cutehi"
+    name:"서가희"
   }
   return (
     <div>
-      {user.login? <Homepage id={user.id} nickname={user.nickname}/>: <Login/>}
+      {user.login? <Homepage name={user.name}/>: <Login/>}
       
     </div>
   );
