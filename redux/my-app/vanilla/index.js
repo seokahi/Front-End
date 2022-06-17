@@ -1,25 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+import { createStore } from "redux";
 
-<head>
-  <meta charset="utf-8" />
-  <title>React App</title>
-</head>
+const plus = document.getElementById("plus");
+const minus = document.getElementById("minus");
+const number = document.getElementById("number");
+const quantity = document.getElementById("quantity");
+const totalPrice = document.getElementById("total");
 
-<body>
- 
+const PRICE = 17500;
 
-  <h1>Product Detail</h1>
-  <h2>딥러닝 개발자 무릎 담요</h2>
-  <span><strong>17,500</strong>원</span>
-  <div id="counter-box">
-    <button type="button" id="minus" disabled>MINUS</button>
-    <span id="number">0</span>
-    <button id="plus">PLUS</button>
-  </div>
-  <div>총 수량 <strong id="quantity">0</strong></div>
-  <div><strong id="total">0</strong>원</div>
-  <script src="../src/index.js"></script>
-</body>
+// Action
+const addNumber = () => {
+  store.dispatch({ type: "ADD" });
+};
 
-</html>
+//Action
+const substractNumber = () => {
+  store.dispatch({ type: "SUBSTRACT" });
+};
+
+// Reducer
+const countReducer = (state = 1, action) => {
+  switch (action.type) {
+    case "ADD":
+      return state + 1;
+    case "SUBSTRACT":
+      return state - 1;
+    default:
+      return state;
+  }
+};
+
+// create Store
+const store = createStore(countReducer);
+
+
+const handleWrite = () => {
+  number.innerText = store.getState();
+  quantity.innerText = store.getState();
+  totalPrice.innerText = store.getState() * PRICE;
+  console.log(store.getState());
+};
+
+// Update UI
+store.subscribe(handleWrite);
+
+// Event
+plus.addEventListener("click", addNumber);
+minus.addEventListener("click", substractNumber);
