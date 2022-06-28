@@ -1,6 +1,6 @@
 class TextManager {
     constructor() {
-        this.value = { data: 'Hello Lions!' };
+        this.value = { data: "hello lions!" };
     }
 
     getValue() {
@@ -10,4 +10,5 @@ class TextManager {
     setValue(newValue) {
         this.value = newValue;
     }
+
 }
