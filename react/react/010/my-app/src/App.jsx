@@ -35,7 +35,7 @@ function Hello(props) {
       <li key={index} style={{listStyle:"none"}}>
         <h2>{index} {value.title}</h2>
         <p>{value.price}</p>
-       </li>))}
+      </li>))}
     </div>
   )
 }
